@@ -1,0 +1,39 @@
+.searchbox{
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    animation: fadeIn 500ms;
+    form{
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        input{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        button{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    &.mini{
+        animation: fadeOutIn 500ms;
+        height: auto;
+        form{
+            justify-content: end;
+        }
+    }
+
+}
+@keyframes fadeOutIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

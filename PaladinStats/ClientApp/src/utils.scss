@@ -1,0 +1,56 @@
+//Screen width
+$sm: 576px;
+$md: 720px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin xsmall-device {
+    @media screen and (max-width: $sm) { @content; }
+}
+@mixin small-device {
+    @media screen and (min-width: $sm) { @content; }
+}
+@mixin medium-device {
+    @media screen and (min-width: $md) { @content; }
+}
+@mixin large-device {
+    @media screen and (min-width: $lg) { @content; }
+}
+@mixin xlarge-device {
+    @media screen and (min-width: $xl) { @content; }
+}
+@mixin xxlarge-device {
+    @media screen and (min-width: $xxl) { @content; }
+}
+
+//Colors
+$goodColor: rgb(0, 197, 0);
+$badColor: rgb(197, 0, 0);
+$greyColor: grey;
+$goodDarkColor: #003a03;
+$badDarkColor: #3a0000;
+$greyDarkColor: rgb(78, 78, 78);
+@mixin whiteAlphaBackground {
+    background-color: rgba($color: white, $alpha: 0.5);
+}
+@mixin winBackground{
+    background-color: rgba($goodDarkColor, 0.8);
+}
+@mixin loseBackground {
+    background-color: rgba($badDarkColor, 0.8);
+}
+@mixin hoverFilter {
+    backdrop-filter: brightness(0.6);
+}
+
+//Border-radius
+$border-radius: 5px;
+
+// Animation
+@mixin fadeIn {
+    animation: fadeIn 500ms;
+}
+@mixin zoomIn {
+    animation: zoomIn 500ms;
+}

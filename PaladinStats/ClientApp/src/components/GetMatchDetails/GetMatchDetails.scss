@@ -1,0 +1,208 @@
+@import '../../utils.scss';
+
+.matchDetails{
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+    .playersList{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 0.5em;
+        .playerDetails{
+            @include fadeIn;
+            cursor: pointer;
+            padding: 0.4em;
+            gap: .5em;
+            display: grid;
+            grid-template-columns: min-content repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr min-content;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-align: center;
+            text-shadow: 4px 4px 4px black;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            border-radius: $border-radius;
+            transition: backdrop-filter 0.5s;
+            .championAvatar{
+                box-shadow: 0 0 15px 5px black;
+                border-radius: $border-radius;
+                width: 5em;
+                grid-row: span 2;
+            }
+            .playerName{
+                grid-column: span 2;
+                display: grid;
+                grid-template-columns: 1fr min-content;
+                .hidden{
+                    font-style: italic;
+                    color: gray;
+                }
+                .party{
+                    grid-column: span 2;
+                }
+            }
+            .rank{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .pointsWinLosess{
+                    display: flex;
+                    flex-direction: column;
+                    .win{
+                        color: $goodColor;
+                    }
+                    .losse{
+                        color: $badColor;
+                    }
+                }
+                img{
+                    width: 4em;
+                }
+            }
+            .kda{
+                font-weight: bold;
+                display: grid;
+                column-gap: .1em;
+                row-gap: 0.2em;
+                .kills{
+                    color: $goodColor;
+                }
+                .deaths{
+                    color: $badColor;
+                }
+                .assists{
+                    color: $greyColor;
+                }
+                .kda_calc{
+                    grid-column: span 5;
+                }
+            }
+            .damage, .healing, .gold{
+                display: grid;
+                grid-template-columns: 1.2em 1fr;
+                grid-auto-rows: 1em;
+                gap: 0.3em;
+                img{
+                    height: 100%;
+                }
+            }
+            .talent{
+                img{
+                    width: 5em;
+                }
+            }
+            .deckItems{
+                display: flex;
+                grid-column: span 5;
+                gap:1.2em;
+            }
+            &.win{
+                @include winBackground;
+            }
+            &.losse{
+                @include loseBackground;
+            }
+            &:hover{
+                @include hoverFilter;
+            }
+            @include small-device{
+                font-size: 1rem;
+            }
+            @include large-device{
+                grid-template-columns: min-content 1.5fr min-content repeat(5, 1fr);
+                grid-template-rows: 1fr min-content;
+                .playerName{
+                    grid-column: span 1;
+                    grid-row: span 2;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .talent, .rank, .damage{
+                    grid-row: span 2;
+                }
+                .deckItems{
+                    grid-column: span 3;
+                }
+            }
+        }
+    }
+    .infoBans{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: .5em;
+        .basicInfo{
+            @include fadeIn;
+            font-size: 1.4em;
+            padding: 0.6rem;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: .5rem;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            @include whiteAlphaBackground;
+            border-radius: $border-radius;
+        }
+        .bans{
+            @include fadeIn;
+            padding: 0.5rem;
+            @include whiteAlphaBackground;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            border-radius: $border-radius;
+            img{
+                width: 60%;
+                box-shadow: 0 0 15px 5px black;
+                border-radius: $border-radius;
+            }
+        }
+        @include large-device{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+        }
+    }
+    &.normal{
+        .infoBans{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+        .playerDetails {
+            grid-template-columns: repeat(4, 1fr);
+            .championAvatar{
+                grid-row: span 1;
+            }
+            .playerName{
+                grid-column: span 2;
+            }
+            .deckItems{
+                grid-column: span 4;
+            }
+            @include large-device{
+                grid-template-columns: min-content 1.5fr min-content repeat(4, 1fr);
+                .playerName{
+                    grid-column: span 1;
+                }
+                .championAvatar{
+                    grid-row: span 2;
+                }
+                .damage{
+                    grid-row: span 1;
+                }
+                .deckItems{
+                    grid-column: span 4;
+                }
+            }
+        }
+    }
+}

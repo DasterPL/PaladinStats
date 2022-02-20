@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import 'utils.scss';
+
+*, *::after, *::before{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+#root{
+  // @include fadeIn;
+  margin: 0;
+  padding: 0;
+  padding-top: 2em;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  @include xsmall-device{
+    width: 100%;
+  }
+  @include small-device{
+    width: 540px;
+  }
+  @include medium-device{
+    width: 720px;
+  }
+  @include large-device{
+    width: 960px;
+  }
+  @include xlarge-device{
+    width: 1140px;
+  }
+  @include xxlarge-device{
+    width: 1320px;
+  }
+}
+
+input{
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0.4em;
+  padding-left: 1em;
+  border: none;
+  outline: solid 1px grey;
+  width: 100%;
+  border-radius: $border-radius;
+  &:active, &:focus{
+    border: none;
+  }
+  &::-webkit-calendar-picker-indicator {
+    color: #999;
+  }
+  &[type=search]{
+    &::-webkit-calendar-picker-indicator {
+      display: none !important;
+      appearance: none;
+      // color: white;
+    }
+    &::-webkit-search-cancel-button {
+      appearance: none;
+      height: .8em;
+      width: .8em;
+      border-radius: 50%;
+      background-color: grey;
+      mask: url(./resources/times-circle.svg) no-repeat 50% 50%;
+      cursor: pointer;
+    }
+  }
+  @include large-device{
+    width: auto;
+  }
+}
+button{
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.4em;
+  border: none;
+  outline: solid 1px #0033a0;
+  background-color: rgba($color: #2469ff, $alpha: 0.8);
+  color: white;
+  border-radius: $border-radius;
+  &:hover, &.active{
+    background-color: rgba($color: #0042d1, $alpha: 0.8);
+  }
+  &:active{
+    background-color: rgba($color: #ff2b2b, $alpha: 0.8);
+    outline: solid 1px #ff2b2b;
+  }
+  &[disabled]{
+    background-color: rgba($color: #5f5f5f, $alpha: 0.8);
+    outline: solid 1px #474747;
+  }
+}
+.buttonGroup{
+  button{
+    &:nth-child(1n+2){
+        border-radius: 0;
+    }
+    &:first-child{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &:last-child{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from { 
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

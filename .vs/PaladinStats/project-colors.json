@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "32e4b4d2-1a8a-455b-a71e-3b4b0370efda": {
+      "ProjectGuid": "32e4b4d2-1a8a-455b-a71e-3b4b0370efda",
+      "DisplayName": "PaladinStats",
+      "ColorIndex": 0
+    },
+    "235df6a7-0269-4f8f-aa55-985fcc63605f": {
+      "ProjectGuid": "235df6a7-0269-4f8f-aa55-985fcc63605f",
+      "DisplayName": "Paladins.API.NET",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

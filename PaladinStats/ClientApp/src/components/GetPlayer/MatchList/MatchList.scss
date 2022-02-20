@@ -1,0 +1,85 @@
+@import '../../../utils.scss';
+.queueType{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    button{
+        font-size: 0.8rem;
+    }
+    @include large-device{
+        button{
+            font-size: 1.2em;
+        }
+    }
+}
+.matchList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.25em;
+    .noMatches {
+        display: flex;
+        background-color: grey;
+        border-radius: $border-radius;
+        padding: 0.4em;
+        justify-content: center;
+        font-size: 1.3em;
+        @include fadeIn;
+    }
+    .li_match {
+        @include fadeIn;
+        cursor: pointer;
+        padding: .2em;
+        border: solid 1px black;
+        display: grid;
+        grid-template-columns: 2em min-content 2fr min-content repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        text-shadow: 4px 4px 4px black;
+        font-size: clamp(0.6rem, 1.5vw, 1.45rem);
+        gap: .2em;
+        border-radius: $border-radius;
+        transition: backdrop-filter 0.5s;
+        .avatar{
+            box-shadow: 0 0 15px 5px black;
+            border-radius: $border-radius;
+        }
+        img {
+            height:3em;
+        }
+        .mapName, .timeScore, .dateTime {
+            display: flex;
+            flex-direction: column;
+        }
+        .kda {
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: repeat(5, min-content);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: .1em;
+            row-gap: 0.2em;
+            .kills {
+                color: $goodColor;
+            }
+            .deaths {
+                color: $badColor;
+            }
+            .assists {
+                color: $greyColor;
+            }
+            .kda_calc {
+                grid-column: span 5;
+            }
+        }
+        &.win {
+            @include winBackground;
+        }
+        &.losse {
+            @include loseBackground;
+        }
+        &:hover {
+            @include hoverFilter;
+        }
+    }
+}

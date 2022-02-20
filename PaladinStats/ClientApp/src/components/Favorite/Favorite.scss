@@ -1,0 +1,43 @@
+@import '../../utils.scss';
+.favoritesPlayers{
+    display: grid;
+    gap: 1em;
+    list-style: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    li{
+        @include zoomIn;
+        display: flex;
+        align-items: center;
+        gap: 0.2em;
+        cursor: pointer;
+        border: solid 1px black;
+        background-color: rgba($color: white, $alpha: 0.6);
+        padding: 0.5em;
+        font-weight: bold;
+        border-radius: $border-radius;
+        transition: background-color 0.5s;
+        img{
+            width: 4em;
+            border-radius: $border-radius;
+        }
+        span{
+            width: 100%;
+            text-align: center;
+        }
+        &:hover{
+            background-color: rgba($color: white, $alpha: 0.8);
+        }
+    }
+    @include small-device{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include large-device{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.favoritesIcon{
+    cursor: pointer;
+}

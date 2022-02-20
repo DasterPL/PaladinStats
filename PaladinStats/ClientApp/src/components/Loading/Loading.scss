@@ -1,0 +1,16 @@
+@import '../../utils.scss';
+.loadingBox{
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    @include fadeIn;
+    text-shadow: 2px 2px 2px black;
+    span{
+        font-size: 2em;
+    }
+}
