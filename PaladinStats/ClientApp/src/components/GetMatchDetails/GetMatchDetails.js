@@ -7,6 +7,7 @@ import Loading from '../Loading/Loading';
 import './GetMatchDetails.scss';
 import PlayerDetails from './PlayerDetails';
 import ErrorNavigate from '../Errors/ErrorNavigate';
+import { CalculateLocalTime } from '../../Calculators';
 
 export default function GetMatchDetails() {
   const { matchId } = useParams();
@@ -27,7 +28,7 @@ export default function GetMatchDetails() {
         <ChampionIcon championId={data.BanId6} />
       </div> : null;
 
-      const dateTime = new Date(data.Entry_Datetime);
+      const dateTime = CalculateLocalTime(data.Entry_Datetime);
       const dateTimeString = `${dateTime.toLocaleDateString('pl-PL')} ${dateTime.toLocaleTimeString('pl-PL')}`;
 
       const party = FindParty(getMatchDetails.data);

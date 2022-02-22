@@ -26,7 +26,7 @@ export default function PlayerDetails({ player }) {
             <span className='wins'>{player.tierWins}</span>
             /
             <span className='losses'>{player.tierLosses}</span>
-            {!isNaN(winRate) ? <span className='precentage'>{winRate}%</span> : null}
+            {winRate !== null ? <span className='precentage'>{winRate}%</span> : null}
         </div>
     </li >
 }

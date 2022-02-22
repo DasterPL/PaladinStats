@@ -14,9 +14,20 @@ export default function BasicBoxKda({ playerChampionRanks }) {
     kda.assists += champion.Assists;
   });
   return <BasicBox className='kda'>
-    <span className='kills'>Zabójstwa<br />{kda.kills}</span>
-    <span className='deaths'>Śmierci<br />{kda.deaths}</span>
-    <span className='assists'>Asysty<br />{kda.assists}</span>
-    <span>{KdaCalculator(kda.kills, kda.deaths, kda.assists)}</span>
+    <div className='twoRow kills'>
+      <span>Zabójstwa</span>
+      <span>{kda.kills}</span>
+    </div>
+    <div className='twoRow deaths'>
+      <span>Śmierci</span>
+      <span>{kda.deaths}</span>
+    </div>
+    <div className='twoRow assists'>
+      <span>Asysty</span>
+      <span>{kda.assists}</span>
+    </div>
+    <div>
+      <span>{KdaCalculator(kda.kills, kda.deaths, kda.assists)}</span>
+    </div>
   </BasicBox>;
 }

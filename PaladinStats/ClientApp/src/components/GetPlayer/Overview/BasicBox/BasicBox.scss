@@ -83,6 +83,11 @@
             content: "Status";
         }
     }
+    .twoRow{
+        display: flex;
+        flex-direction: column;
+        gap: .15em;
+    }
     @include large-device{
         grid-column: span 9;
     }
