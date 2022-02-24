@@ -4,6 +4,7 @@ import BasicBox from './BasicBox';
 
 export default function BasicBoxRank({ tier, tp }) {
   return <BasicBox className='rank'>
+    <span className='rankSpan'>Ranking</span>
     <RankIcon tier={tier} />
     <span>{tp} tp</span>
   </BasicBox>;

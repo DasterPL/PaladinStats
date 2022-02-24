@@ -11,12 +11,13 @@ import ErrorNavigate from '../Errors/ErrorNavigate';
 
 export default function GetPlayer() {
     const { playerName } = useParams();
-    const [render, setRender] = useState(<Loading />);
+    const [render, setRender] = useState(null);
+    const [reload, setReload] = useState(false);
 
     async function getData() {
         try {
-            const [getPlayer, getPlayerChampionRanks, getPlayerStatus, getPlayerMatchHistory] = await Promise.all([
-                axios.get(`/api/getPlayer/${playerName}`),
+            const getPlayer = await axios.get(`/api/getPlayer/${playerName}`);
+            const [getPlayerChampionRanks, getPlayerStatus, getPlayerMatchHistory] = await Promise.all([
                 axios.get(`/api/getPlayerChampionRanks/${playerName}`),
                 axios.get(`/api/getPlayerStatus/${playerName}`),
                 axios.get(`/api/getPlayerMatchHistory/${playerName}`)
@@ -32,16 +33,16 @@ export default function GetPlayer() {
             const lastSearchedLimit = lastSearched.splice(0, 5);
             Cookies().set('lastSearched', lastSearchedLimit, { path: '/', expires: new Date(Date.now() + 3600 * 1000 * 24) });
 
-            setRender(<ViewSwitcher playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
+            setRender(<ViewSwitcher handleReloadClick={()=>setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
         } catch (error) {
             setRender(<ErrorNavigate error={error} />)
         }
     }
 
     useEffect(() => {
-        setRender(<Loading />);
+        setRender(<Loading/>);
         getData();
-    }, [playerName]);
+    }, [playerName, reload]);
 
     return render;
 }

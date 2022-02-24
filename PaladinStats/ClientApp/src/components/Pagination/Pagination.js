@@ -20,13 +20,12 @@ export default function Pagination({ changePage, count }) {
             handlePageChange(currentPage + 1);
         }
     }
-
     function handlePageChange(page) {
         setCurrentPage(page);
         if (page === 0) {
             setLeftDisabled(true);
-
-        } else if (page === count - 1) {
+        }
+        if (page === count - 1) {
             setRightDisabled(true);
         }
         if (page > 0) {
@@ -38,7 +37,7 @@ export default function Pagination({ changePage, count }) {
         changePage(page);
     }
 
-    return count > 0 ? <div className='pagination buttonGroup'>
+    return count > 1 ? <div className='pagination buttonGroup'>
         <button onClick={pageDown} disabled={leftDisabled} ><FontAwesomeIcon icon={faArrowLeft} /></button>
         {Array.from({ length: count }).map((e, index) => <button className={index === currentPage ? 'active' : ''} key={index} onClick={() => handlePageChange(index)}>{index + 1}</button>)}
         <button onClick={pageUp} disabled={rightDisabled}><FontAwesomeIcon icon={faArrowRight} /></button>

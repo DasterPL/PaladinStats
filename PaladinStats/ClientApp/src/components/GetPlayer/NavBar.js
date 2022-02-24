@@ -1,34 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRotateRight } from '@fortawesome/free-solid-svg-icons';
+import { useLocation, useNavigate, useParams } from 'react-router';
 
-export default function NawBar({ changeView }) {
-    const [overview_classes, setOverview_classes] = useState('active');
-    const [matches_classes, setMatches_classes] = useState();
-    const [champion_classes, setChampion_classes] = useState();
+export default function NawBar({ handleReloadClick }) {
+    const navigate = useNavigate();
+    const { playerName } = useParams();
+    const { pathname: location } = useLocation();
 
-    function setClasses(state) {
-        setOverview_classes(null);
-        setMatches_classes(null);
-        setChampion_classes(null);
+    const pathname = `/player/${playerName}`;
 
-        state('active');
+    // function handleReloadClick() {
+    //     window.location.reload();
+    // }
+    function isActive(linkPath) {
+        return linkPath === location ? 'active' : '';
     }
-    function handleOverviewClick(){
-        changeView("overview");
-        setClasses(setOverview_classes);
-    }
-
-    function handleMatchClick() {
-        changeView("matches");
-        setClasses(setMatches_classes);
-    }
-    function handleChampionClick() {
-        changeView("champions");
-        setClasses(setChampion_classes);
-    }
-
     return <nav className='nawBar buttonGroup'>
-        <button onClick={handleOverviewClick}   className={overview_classes}>Przegląd</button>
-        <button onClick={handleMatchClick}      className={matches_classes}>Mecze</button>
-        <button onClick={handleChampionClick}   className={champion_classes}>Postacie</button>
+        <button onClick={handleReloadClick} title="Odśwież"><FontAwesomeIcon icon={faArrowRotateRight} /></button>
+        <button onClick={() => navigate(pathname)} className={isActive(pathname)}>Przegląd</button>
+        <button onClick={() => navigate(`${pathname}/matches`)} className={isActive(`${pathname}/matches`)}>Mecze</button>
+        <button onClick={() => navigate(`${pathname}/champions`)} className={isActive(`${pathname}/champions`)}>Postacie</button>
     </nav>;
 }

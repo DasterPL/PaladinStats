@@ -8,10 +8,16 @@ export default function FavoritesPlayers() {
     const navigate = useNavigate();
     const favourites = Cookies().get('favouritesPlayers') || [];
 
-    return <ul className='favoritesPlayers'>
-        {favourites.map(({ name, avatar, id }, index) => <li key={index} onClick={() => { navigate(`/player/${id}`) }}>
+    while(favourites.length % 4 !== 0){
+        favourites.push({name: null, avatar: null, id: null});
+    }
+
+    return favourites.length > 0 ? <ul className='favoritesPlayers'>
+        {favourites.map(({ name, avatar, id }, index) => id===null ? 
+        <li key={index} className="empty"></li> : 
+        <li key={index} onClick={() => { navigate(`/player/${id}`) }}>
             <img onError={HandleErrorImg} src={avatar} alt='' />
             <span>{name}</span>
         </li>)}
-    </ul>
+    </ul> : null;
 }

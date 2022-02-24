@@ -27,8 +27,13 @@
             width: 100%;
             text-align: center;
         }
+        &.empty{
+            border: solid 1px gray;
+            background-color: rgba($color: white, $alpha: 0.5);
+            cursor: default;
+        }
         &:hover{
-            background-color: rgba($color: white, $alpha: 0.8);
+            background-color: rgba($color: white, $alpha: 0.85);
         }
     }
     @include small-device{

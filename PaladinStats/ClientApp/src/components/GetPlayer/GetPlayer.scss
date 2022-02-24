@@ -12,8 +12,14 @@
 .nawBar{
     @include fadeIn;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: min-content repeat(3, 1fr);
     @include large-device{
         position: absolute;
     }
+}
+.classChart{
+    margin: 0 auto;
+    // @include xlarge-device{
+    //     width: 45%;
+    // }
 }

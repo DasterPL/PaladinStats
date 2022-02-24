@@ -24,7 +24,7 @@ export default function App() {
                 <SearchPlayer />
                 <Routes>
                     <Route exact path='/' element={null} />
-                    <Route path='/player/:playerName' element={<GetPlayer />} />
+                    <Route path='/player/:playerName/*' element={<GetPlayer />} />
                     <Route path='/match/:matchId' element={<GetMatchDetails />} />
                     <Route path='/activematch/:matchId' element={<GetActiveMatchDetails />} />
                     <Route path='/error/:code' element={<ErrorPage />} />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { KdaCalculator, WinRateCalculator } from '../../../Calculators';
-import QueueType from '../QueueType';
+// import QueueType from '../QueueType';
 import Champion from './Champion';
 import ChampionFilter from './ChampionFilter';
 import championsList from '../../../resources/champions.json';
