@@ -39,8 +39,11 @@ export default function SearchPlayer() {
 
     return <div className={`searchbox${!isHome ? ' mini' : ''}`}>
         <form onSubmit={handleSubmit}>
-            <input type='search' list="lastSearched" name='playerName' placeholder='Nazwa gracza' value={value} onChange={e => { setValue(e.target.value) }} />
-            <datalist id="lastSearched" onDoubleClick={(e)=>{console.log(e)}}>
+            <div className='input'>
+                <input type='search' list="lastSearched" id="nick_input" placeholder=' ' name='playerName' value={value} onChange={e => { setValue(e.target.value) }} />
+                <label htmlFor="nick_input">Nazwa gracza</label>
+            </div>
+            <datalist id="lastSearched" onDoubleClick={(e) => { console.log(e) }}>
                 {lastSearched}
             </datalist>
             <button type='submit'><FontAwesomeIcon icon={faSearch} /></button>

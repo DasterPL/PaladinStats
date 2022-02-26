@@ -1,5 +1,6 @@
 @import '../../utils.scss';
-.loadingBox{
+
+.loadingBox {
     color: white;
     display: flex;
     width: 100%;
@@ -10,7 +11,8 @@
     gap: 1em;
     @include fadeIn;
     text-shadow: 2px 2px 2px black;
-    span{
+
+    span {
         font-size: 2em;
     }
 }

@@ -1,5 +1,6 @@
 @import '../../../../utils.scss';
-.basicBox{
+
+.basicBox {
     grid-column: span 18;
     border: solid 1px;
     padding: 0.4em;
@@ -11,64 +12,81 @@
     border-radius: $border-radius;
     z-index: 0;
     @include whiteAlphaBackground;
-    &::before{
+
+    &::before {
         position: absolute;
         color: rgba($color: #000000, $alpha: 0.5);
         font-size: 2rem;
         top: 0;
         z-index: -1;
     }
-    &.avatar{
+
+    &.avatar {
         justify-content: space-between;
-        img{
+
+        img {
             height: 100%;
             border-radius: $border-radius;
         }
-        .playerInfo{
+
+        .playerInfo {
             width: 100%;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(2, 1fr);
-            .playerNameLevel{
+
+            .playerNameLevel {
                 font-weight: bold;
                 font-size: 1.5em;
             }
         }
     }
-    &.winRate{
+
+    &.winRate {
         font-size: 1.3rem;
-        &.normal::before{
+
+        &.normal::before {
             content: "Mecze";
         }
-        &.ranked::before{
+
+        &.ranked::before {
             content: "Mecze Rankingowe";
         }
-        .wins{
+
+        .wins {
             color: green;
         }
-        .losses{
+
+        .losses {
             color: red;
         }
-        .sum{
+
+        .sum {
             color: $greyDarkColor;
         }
     }
-    &.kda{
+
+    &.kda {
         font-size: 1.3em;
-        &::before{
+
+        &::before {
             content: "KDA";
         }
-        .kills{
+
+        .kills {
             color: green;
         }
-        .deaths{
+
+        .deaths {
             color: red;
         }
-        .assists{
+
+        .assists {
             color: $greyDarkColor;
         }
     }
-    &.rank{
+
+    &.rank {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: min-content 1fr;
@@ -76,32 +94,36 @@
         align-items: start;
         font-size: 2em;
         padding: 0;
-        .rankSpan{
+
+        .rankSpan {
             grid-column: span 2;
             color: rgba($color: #000000, $alpha: 0.5);
         }
-        // &::before{
-        //     content: "";
-        // }
-        img{
+
+        img {
             height: 2.5em;
         }
     }
-    &.status{
+
+    &.status {
         font-size: 1.6em;
-        &::before{
+
+        &::before {
             content: "Status";
         }
     }
-    .twoRow{
+
+    .twoRow {
         display: flex;
         flex-direction: column;
         gap: .15em;
     }
-    @include large-device{
+
+    @include large-device {
         grid-column: span 9;
     }
-    @include xlarge-device{
+
+    @include xlarge-device {
         grid-column: span 6;
     }
 }

@@ -1,5 +1,6 @@
 @import '../../utils.scss';
-.favoritesPlayers{
+
+.favoritesPlayers {
     display: grid;
     gap: 1em;
     list-style: none;
@@ -7,7 +8,8 @@
     padding: 0.2em;
     flex-wrap: wrap;
     justify-content: center;
-    li{
+
+    li {
         @include zoomIn;
         display: flex;
         align-items: center;
@@ -19,30 +21,39 @@
         font-weight: bold;
         border-radius: $border-radius;
         transition: background-color 0.5s;
-        img{
-            width: 4em;
+        height: 5em;
+        min-width: 12em;
+
+        img {
+            height: 100%;
             border-radius: $border-radius;
         }
-        span{
+
+        span {
             width: 100%;
             text-align: center;
         }
-        &.empty{
+
+        &.empty {
             border: solid 1px gray;
             background-color: rgba($color: white, $alpha: 0.5);
             cursor: default;
         }
-        &:hover{
+
+        &:hover {
             background-color: rgba($color: white, $alpha: 0.85);
         }
     }
-    @include small-device{
+
+    @include small-device {
         grid-template-columns: repeat(2, 1fr);
     }
-    @include large-device{
+
+    @include large-device {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-.favoritesIcon{
+
+.favoritesIcon {
     cursor: pointer;
 }

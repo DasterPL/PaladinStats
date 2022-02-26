@@ -6,22 +6,39 @@ $xl: 1200px;
 $xxl: 1400px;
 
 @mixin xsmall-device {
-    @media screen and (max-width: $sm) { @content; }
+    @media screen and (max-width: $sm) {
+        @content;
+    }
 }
+
 @mixin small-device {
-    @media screen and (min-width: $sm) { @content; }
+    @media screen and (min-width: $sm) {
+        @content;
+    }
 }
+
 @mixin medium-device {
-    @media screen and (min-width: $md) { @content; }
+    @media screen and (min-width: $md) {
+        @content;
+    }
 }
+
 @mixin large-device {
-    @media screen and (min-width: $lg) { @content; }
+    @media screen and (min-width: $lg) {
+        @content;
+    }
 }
+
 @mixin xlarge-device {
-    @media screen and (min-width: $xl) { @content; }
+    @media screen and (min-width: $xl) {
+        @content;
+    }
 }
+
 @mixin xxlarge-device {
-    @media screen and (min-width: $xxl) { @content; }
+    @media screen and (min-width: $xxl) {
+        @content;
+    }
 }
 
 //Colors
@@ -31,15 +48,19 @@ $greyColor: grey;
 $goodDarkColor: #003a03;
 $badDarkColor: #3a0000;
 $greyDarkColor: rgb(78, 78, 78);
+
 @mixin whiteAlphaBackground {
     background-color: rgba($color: white, $alpha: 0.5);
 }
-@mixin winBackground{
+
+@mixin winBackground {
     background-color: rgba($goodDarkColor, 0.8);
 }
+
 @mixin loseBackground {
     background-color: rgba($badDarkColor, 0.8);
 }
+
 @mixin hoverFilter {
     backdrop-filter: brightness(0.6);
 }
@@ -51,6 +72,7 @@ $border-radius: 5px;
 @mixin fadeIn {
     animation: fadeIn 500ms;
 }
+
 @mixin zoomIn {
     animation: zoomIn 500ms;
 }

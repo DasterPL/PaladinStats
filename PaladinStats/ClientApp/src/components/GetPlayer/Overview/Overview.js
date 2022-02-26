@@ -7,7 +7,6 @@ import BasicBoxAvatar from './BasicBox/BasicBoxAvatar';
 import ClassChart from './ClassChart';
 
 export default function Overview({ playerData, championData, statusData }) {
-    
     return <>
         <div className='getPlayer'>
             <BasicBoxAvatar avatar={playerData.AvatarURL} playerName={playerData.hz_player_name} level={playerData.Level} title={playerData.Title} id={playerData.Id} />

@@ -1,5 +1,6 @@
 @import '../../utils.scss';
-.getPlayer{
+
+.getPlayer {
     display: grid;
     width: 100%;
     padding-top: 0;
@@ -9,17 +10,21 @@
     @include fadeIn;
     position: relative;
 }
-.nawBar{
+
+.nawBar {
     @include fadeIn;
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr);
-    @include large-device{
+
+    @include large-device {
         position: absolute;
     }
 }
-.classChart{
+
+.classChart {
     margin: 0 auto;
-    // @include xlarge-device{
-    //     width: 45%;
-    // }
+
+    @include xlarge-device {
+        width: 35%;
+    }
 }

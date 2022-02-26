@@ -1,51 +1,61 @@
 @import '../../../utils.scss';
-.championFilter{
+
+.championFilter {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    .championName{
+
+    .championName {
         width: 100%;
     }
-    .roleFilter{
+
+    .roleFilter {
         display: flex;
         gap: 2em;
         align-items: center;
         justify-content: space-evenly;
-        input{
-            &[type="checkbox"]{
+
+        input {
+            &[type="checkbox"] {
                 display: none;
-                &+label{
-                    img{
+
+                &+label {
+                    img {
                         filter: grayscale(1) brightness(0.5) drop-shadow(0px 0px 5px rgb(255, 255, 255));
                     }
                 }
-                &:checked{
-                    &+label{
-                        img{
+
+                &:checked {
+                    &+label {
+                        img {
                             filter: grayscale(0) drop-shadow(0px 0px 5px rgb(0, 0, 0)) hue-rotate(35deg);
                         }
                     }
                 }
             }
         }
-        img{
+
+        img {
             width: 2em;
         }
     }
-    @include large-device{
+
+    @include large-device {
         flex-direction: row;
         justify-content: space-between;
         gap: 2em;
     }
 }
-.championList{
+
+.championList {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: .3em;
     @include fadeIn;
     font-size: .42em;
-    li{
+
+    li {
         padding: 0.25em;
         grid-template-columns: min-content repeat(10, 1fr);
         align-items: center;
@@ -55,19 +65,22 @@
         @include whiteAlphaBackground;
         border-radius: $border-radius;
         transition: backdrop-filter 0.5s;
-        .avatar{
+
+        .avatar {
             display: flex;
             align-items: center;
             gap: .2em;
             width: 8em;
             text-align: center;
             white-space: nowrap;
-            img{
+
+            img {
                 width: 3em;
                 border-radius: $border-radius;
             }
         }
-        &.title{
+
+        &.title {
             user-select: none;
             grid-template-rows: 3em;
             z-index: 10;
@@ -75,24 +88,30 @@
             background-color: #fff;
             top: .5em;
             font-weight: bold;
-            .avatarTitle{
+
+            .avatarTitle {
                 width: 8em;
             }
-            & > *{
+
+            &>* {
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     color: rgb(66, 66, 66);
                 }
-        } 
+            }
         }
-        &:hover{
+
+        &:hover {
             backdrop-filter: brightness(0.6);
         }
     }
-    @include medium-device{
+
+    @include medium-device {
         font-size: .7em;
     }
-    @include large-device{
+
+    @include large-device {
         font-size: 1em;
     }
 }

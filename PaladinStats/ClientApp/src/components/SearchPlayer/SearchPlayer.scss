@@ -1,4 +1,4 @@
-.searchbox{
+.searchbox {
     height: 100%;
     display: inline-flex;
     flex-direction: column;
@@ -7,33 +7,40 @@
     gap: 2em;
 
     animation: fadeIn 500ms;
-    form{
+
+    form {
         display: inline-flex;
         width: 100%;
         justify-content: center;
-        input{
+
+        input {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
-        button{
+
+        button {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
     }
-    &.mini{
+
+    &.mini {
         animation: fadeOutIn 500ms;
         height: auto;
-        form{
+
+        form {
             justify-content: end;
         }
     }
 
 }
+
 @keyframes fadeOutIn {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }

@@ -19,7 +19,7 @@ export default function ChampionFilter({ onRoleClick, onTextChange }) {
         }
         onRoleClick(selected);
     }
-    function handleTextChange(event){
+    function handleTextChange(event) {
         ref.current.damage.checked = false;
         ref.current.flank.checked = false;
         ref.current.frontline.checked = false;
@@ -28,7 +28,10 @@ export default function ChampionFilter({ onRoleClick, onTextChange }) {
         onTextChange(event.target.value);
     }
     return <nav className='championFilter'>
-        <input className='championName' type="search" placeholder='Nazwa postaci' value={championFilterByName} onChange={handleTextChange}/>
+        <div className='input championName'>
+            <input className='championName' id="championName" type="search" placeholder=' ' value={championFilterByName} onChange={handleTextChange} />
+            <label htmlFor='championName'>Nazwa postaci</label>
+        </div>
         <form className='roleFilter' ref={ref}>
             <span>
                 <input type="checkbox" id="damage" name="damage" onChange={handleChange} />

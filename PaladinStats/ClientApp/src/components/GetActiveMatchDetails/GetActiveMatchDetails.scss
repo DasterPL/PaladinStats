@@ -1,24 +1,28 @@
 @import '../../utils.scss';
-.activeMatchDetails{
+
+.activeMatchDetails {
     @include fadeIn;
     display: flex;
     flex-direction: column;
     gap: .4em;
-    .info{
+
+    .info {
         font-size: 1.5em;
         padding: 0.5rem;
         border-radius: $border-radius;
         @include whiteAlphaBackground;
         text-align: center;
     }
-    ul{
+
+    ul {
         list-style: none;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
         grid-auto-flow: column;
         gap: .4em;
-        li{
+
+        li {
             cursor: pointer;
             display: grid;
             grid-template-columns: min-content min-content 2fr 1fr;
@@ -31,93 +35,116 @@
             padding: .4em;
             border-radius: $border-radius;
             transition: backdrop-filter 0.5s;
-            .playerName{
-                .hidden{
+
+            .playerName {
+                .hidden {
                     font-style: italic;
                     color: gray;
                 }
             }
-            img{
+
+            img {
                 width: 4rem;
                 border-radius: $border-radius;
                 grid-row: span 2;
             }
-            .avatar{
+
+            .avatar {
                 box-shadow: 0 0 15px 5px black;
             }
-            .level{
+
+            .level {
                 grid-column: 3;
             }
-            .winRate{
+
+            .winRate {
                 grid-column: 4;
                 grid-row: 1 / span 2;
                 display: grid;
                 grid-template-columns: repeat(3, min-content);
                 column-gap: .2em;
-                .wins{
+
+                .wins {
                     color: $goodColor;
                 }
-                .losses{
+
+                .losses {
                     color: $badColor;
                 }
-                .precentage{
+
+                .precentage {
                     grid-column: span 3;
                 }
             }
-            &.team1{
+
+            &.team1 {
                 @include winBackground;
             }
-            &.team2{
+
+            &.team2 {
                 @include loseBackground;
             }
-            &:hover{
+
+            &:hover {
                 @include hoverFilter;
             }
-            @include medium-device{
+
+            @include medium-device {
                 grid-template-columns: min-content min-content 2fr 1fr 1fr;
                 grid-template-rows: 1fr;
-                img{
+
+                img {
                     grid-row: span 1;
                 }
-                .level{
+
+                .level {
                     grid-column: 4;
                 }
-                .winRate{
+
+                .winRate {
                     grid-column: 5;
                     grid-row: 1 / span 1;
                 }
             }
         }
-        @include large-device{
+
+        @include large-device {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(5, 1fr);
-            li{
-                &.team2{
+
+            li {
+                &.team2 {
                     grid-template-columns: 1fr 1fr 2fr min-content min-content;
-                    .winRate{
+
+                    .winRate {
                         grid-column: 1;
                         grid-row: 1;
                     }
-                    .level{
+
+                    .level {
                         grid-column: 2;
                         grid-row: 1;
                     }
-                    .playerName{
+
+                    .playerName {
                         grid-column: 3;
                         grid-row: 1;
                     }
-                    .rank{
+
+                    .rank {
                         grid-column: 4;
                         grid-row: 1;
                     }
-                    .avatar{
+
+                    .avatar {
                         grid-column: 5;
                         grid-row: 1;
                     }
                 }
             }
         }
-        @include xlarge-device{
+
+        @include xlarge-device {
             font-size: 1.3em;
         }
     }

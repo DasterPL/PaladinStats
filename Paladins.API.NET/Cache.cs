@@ -3,7 +3,7 @@ using System;
 
 namespace PaladinsDev.PaladinsDotNET
 {
-    class Cache
+    public class Cache
     {
         private IMemoryCache cache;
 
