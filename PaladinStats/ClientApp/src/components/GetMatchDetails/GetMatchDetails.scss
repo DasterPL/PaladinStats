@@ -203,6 +203,16 @@
             grid-template-rows: 1fr;
         }
     }
+    .chart{
+        @include large-device{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .chartSwitch{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) min-content;
+        }
+    }
 
     &.normal {
         .infoBans {

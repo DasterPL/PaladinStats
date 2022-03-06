@@ -32,7 +32,7 @@ export default function App() {
                 </Routes>
             </section>
         </Router>
-        <CookieConsent buttonText='OK' buttonStyle={{ margin: '0.3em' }} >Ta strona wykorzystuje pliki cookies</CookieConsent>
+        <CookieConsent buttonText='OK' buttonClasses='button' disableButtonStyles={true} buttonStyle={{ margin: '0.3em' }} >Ta strona wykorzystuje pliki cookies</CookieConsent>
         <footer>
             <Version />
         </footer>

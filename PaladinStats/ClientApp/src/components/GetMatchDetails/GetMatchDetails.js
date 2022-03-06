@@ -1,13 +1,17 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+
 import FindParty from '../../FindParty';
 import ChampionIcon from '../ChampionIcon';
 import Loading from '../Loading/Loading';
-import './GetMatchDetails.scss';
 import PlayerDetails from './PlayerDetails';
 import ErrorNavigate from '../Errors/ErrorNavigate';
+import MatchCharts from './MatchCharts';
+
 import { CalculateLocalTime } from '../../Calculators';
+
+import './GetMatchDetails.scss';
 
 export default function GetMatchDetails() {
   const { matchId } = useParams();
@@ -46,6 +50,7 @@ export default function GetMatchDetails() {
         <ul className='playersList'>
           {getMatchDetails.data.map((player, index) => <PlayerDetails key={index} data={player} party={party[index]} />)}
         </ul>
+        <MatchCharts matchData={getMatchDetails.data} />
       </div>);
     } catch (error) {
       setRender(<ErrorNavigate error={error} />)

@@ -16,6 +16,6 @@ export default function Overview({ playerData, championData, statusData }) {
             <BasicBoxRank tier={playerData.RankedKBM.Tier} tp={playerData.RankedKBM.Points} />
             <BasicBoxStatus status={statusData} />
         </div>
-        <ClassChart championData={championData}/>
+        <ClassChart championData={championData} />
     </>
 }
