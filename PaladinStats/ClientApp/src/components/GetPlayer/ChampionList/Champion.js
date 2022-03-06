@@ -1,11 +1,16 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 import { KdaCalculator, WinRateCalculator } from '../../../Calculators';
 import ChampionIcon from '../../ChampionIcon'
 
 export default function Champion({ champion }) {
     const hours = Math.floor(champion.Minutes / 60);
     const minutes = champion.Minutes % 60;
-    return <li>
+    return <motion.li
+        layout
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}>
         <div className='avatar'>
             <ChampionIcon championId={champion.champion_id} />
             <span>{champion.champion}</span>
@@ -20,5 +25,5 @@ export default function Champion({ champion }) {
         <span>{champion.Wins}</span>
         <span>{champion.Losses}</span>
         <span>{WinRateCalculator(champion.Wins, champion.Losses)}</span>
-    </li>
+    </motion.li>
 }

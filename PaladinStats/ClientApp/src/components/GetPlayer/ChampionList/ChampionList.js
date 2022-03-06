@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
 import { KdaCalculator, WinRateCalculator } from '../../../Calculators';
-// import QueueType from '../QueueType';
 import Champion from './Champion';
 import ChampionFilter from './ChampionFilter';
 import championsList from '../../../resources/champions.json';
@@ -97,8 +97,8 @@ export default function ChampionList({ championData }) {
     setOrderBy(['time', false]);
   }
 
-  function handleTextChange(text){
-    const filtered = championData.filter(row=> row.champion.toLowerCase().indexOf(text.toLowerCase()) !== -1);
+  function handleTextChange(text) {
+    const filtered = championData.filter(row => row.champion.toLowerCase().indexOf(text.toLowerCase()) !== -1);
     setSort(filtered);
   }
 
@@ -108,9 +108,9 @@ export default function ChampionList({ championData }) {
 
   return <>
     {/* <QueueType /> */}
-    <ChampionFilter onRoleClick={handleRoleClick} onTextChange={handleTextChange}/>
-    <ul className='championList'>
-      <li className='title' onClick={handleClick}>
+    <ChampionFilter onRoleClick={handleRoleClick} onTextChange={handleTextChange} />
+    <div className='championList-container'>
+      <div className='championList-title' onClick={handleClick}>
         <span data-type='name' className='avatarTitle'>Postać</span>
         <span data-type='lvl'>Poziom</span>
         <span data-type='time'>Czas gry</span>
@@ -122,8 +122,12 @@ export default function ChampionList({ championData }) {
         <span data-type='wins'>Wygrane</span>
         <span data-type='losses'>Przegrane</span>
         <span data-type='winrate'>Winrate</span>
-      </li>
-      {champions}
-    </ul>
+      </div>
+      <motion.ul layout className='championList'>
+        <AnimatePresence>
+          {champions}
+        </AnimatePresence>
+      </motion.ul>
+    </div>
   </>
 }
