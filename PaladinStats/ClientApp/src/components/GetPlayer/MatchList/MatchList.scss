@@ -23,7 +23,7 @@
 
     .noMatches {
         display: flex;
-        background-color: grey;
+        background-color: rgba(128, 128, 128, 0.7);
         border-radius: $border-radius;
         padding: 0.4em;
         justify-content: center;

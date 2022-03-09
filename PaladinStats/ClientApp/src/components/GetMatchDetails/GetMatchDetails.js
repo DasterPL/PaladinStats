@@ -38,6 +38,7 @@ export default function GetMatchDetails() {
       const party = FindParty(getMatchDetails.data);
 
       setRender(<div className={`matchDetails ${data.name !== 'Ranked' ? 'normal' : ''}`}>
+        <div className='mapName'>{data.Map_Game}</div>
         <div className='infoBans'>
           <div className='basicInfo'>
             <span>{data.name}</span>

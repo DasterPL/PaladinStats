@@ -9,10 +9,15 @@ export default function Deck({ list, type, levels }) {
     return <ul className={`itemList ${type}`}>
         {items.map((item, index) => {
             if (item) {
-                const description = item.Description
+                const level = type === 'items' ? levels[index] + 1 : levels[index];
+                const descriptionScale = +item.Description.match(/{([^;]*)}/)[1].replace('scale=', '').split('|')[0];
+                const scaleLevel = (descriptionScale * level).toPrecision(2);
+
+                const description = item.Description.replace(/{([^;]*)}/, scaleLevel);
+
                 return <li key={index} className='li_deck'>
                     <img onError={HandleErrorImg} src={item.itemIcon_URL} alt={item.DeviceName.substring(0, 4)} title={`${item.DeviceName}: ${description}`} />
-                    <span className='itemLevel'>{type === 'items' ? levels[index] + 1 : levels[index]}</span>
+                    <span className='itemLevel'>{level}</span>
                 </li>
             } else {
                 return <li key={index}></li>

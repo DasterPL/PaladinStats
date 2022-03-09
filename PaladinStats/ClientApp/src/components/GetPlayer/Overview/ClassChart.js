@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chart, ArcElement, Title } from 'chart.js';
+import { Chart, ArcElement, Title, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
@@ -9,6 +9,7 @@ export default function ClassChart({ championData }) {
     Chart.register(ArcElement);
     Chart.register(ChartDataLabels);
     Chart.register(Title);
+    Chart.register(Tooltip);
 
     function matchSum(role) {
         const filtered = championData.filter(champion => championsList.find(c => c.id == champion.champion_id)?.Roles === role);

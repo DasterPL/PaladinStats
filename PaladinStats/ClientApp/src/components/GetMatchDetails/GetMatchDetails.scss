@@ -136,7 +136,7 @@
             }
 
             @include large-device {
-                grid-template-columns: min-content 1.5fr min-content repeat(5, 1fr);
+                grid-template-columns: min-content 1.5fr 5em repeat(5, 1fr);
                 grid-template-rows: 1fr min-content;
 
                 .playerName {
@@ -155,6 +155,15 @@
                 }
             }
         }
+    }
+
+    .mapName{
+        @include whiteAlphaBackground;
+        border-radius: $border-radius;
+        text-align: center;
+        font-size: 1.4em;
+        padding: .2em;
+        font-weight: bold;
     }
 
     .infoBans {

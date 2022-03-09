@@ -76,6 +76,7 @@
         background-color: #fff;
         top: .5em;
         font-weight: bold;
+        font-size: .42em;
     
         .avatarTitle {
             width: 8em;
@@ -87,6 +88,13 @@
             &:hover {
                 color: rgb(66, 66, 66);
             }
+        }
+        @include medium-device {
+            font-size: .7em;
+        }
+    
+        @include large-device {
+            font-size: 1em;
         }
     }
 

@@ -80,7 +80,7 @@ export default function MatchCharts({ matchData }) {
                     },
                     position: 'nearest',
                     callbacks: {
-                        label: context => context.formattedValue
+                        label: context => `${context.dataset.label}: ${context.formattedValue}`
                     }
                 }
             }
