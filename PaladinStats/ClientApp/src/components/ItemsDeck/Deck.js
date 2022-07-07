@@ -10,7 +10,8 @@ export default function Deck({ list, type, levels }) {
         {items.map((item, index) => {
             if (item) {
                 const level = type === 'items' ? levels[index] + 1 : levels[index];
-                const descriptionScale = +item.Description.match(/{([^;]*)}/)[1].replace('scale=', '').split('|')[0];
+                const descriptionMatch = item.Description.match(/{([^;]*)}/);
+                const descriptionScale = descriptionMatch ? +descriptionMatch[1].replace('scale=', '').split('|')[0] : 1;
                 const scaleLevel = (descriptionScale * level).toPrecision(2);
 
                 const description = item.Description.replace(/{([^;]*)}/, scaleLevel);

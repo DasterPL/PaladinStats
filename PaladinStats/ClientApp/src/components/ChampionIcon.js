@@ -8,7 +8,7 @@ export default function ChampionIcon({ championId, className }) {
     return <div>-</div>;
   }
   const champion = champions.find(champion => champion.id === id);
-  return <img onError={HandleErrorImg} className={className} src={champion?.ChampionIcon_URL} alt={champion.Name} title={champion.Name} />;
+  return <img onError={HandleErrorImg} className={className} src={champion?.ChampionIcon_URL || "err"} alt={champion?.Name || "Not found"} title={champion?.Name || "Not found"} />;
 }
 
 export function ImageSrc(id){
