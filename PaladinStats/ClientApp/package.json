@@ -1,6 +1,6 @@
 {
   "name": "paladinstats",
-  "version": "0.7.9",
+  "version": "0.8",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0",

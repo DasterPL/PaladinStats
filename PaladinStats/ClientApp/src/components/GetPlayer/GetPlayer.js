@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Cookies from '../../CookieSingleton';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
@@ -22,16 +21,6 @@ export default function GetPlayer() {
                 axios.get(`/api/getPlayerStatus/${playerName}`),
                 axios.get(`/api/getPlayerMatchHistory/${playerName}`)
             ]);
-
-            const lastSearched = Cookies().get('lastSearched') || [];
-            const index = lastSearched.indexOf(getPlayer.data.hz_player_name);
-            if (index !== -1) {
-                arrayMove(lastSearched, index, 0);
-            } else {
-                lastSearched.unshift(getPlayer.data.hz_player_name);
-            }
-            const lastSearchedLimit = lastSearched.splice(0, 5);
-            Cookies().set('lastSearched', lastSearchedLimit, { path: '/', expires: new Date(Date.now() + 3600 * 1000 * 24) });
 
             setRender(<ViewSwitcher handleReloadClick={()=>setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
         } catch (error) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Cookies from '../../CookieSingleton';
+import useLocalStorage from '../../useLocalStorage';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -14,18 +14,15 @@ export default function SearchPlayer() {
 
     const [value, setValue] = useState('');
 
-    const lastSearchedCookie = Cookies().get('lastSearched') || [];
-    const [lastSearched, setLastSearched] = useState(lastSearchedCookie.map((player, index) => <option key={index} value={player} />))
+    const [lastSearched, setLastSearched] = useLocalStorage('lastSearched', []);
 
+    
     useEffect(() => {
-        Cookies().addChangeListener(cookie => {
-            if (cookie.name === 'lastSearched') {
-                const newCookie = Cookies().get('lastSearched')
-                setLastSearched(newCookie.map((player, index) => <option key={index} value={player} />));
-            }
+        lastSearched.addChangeListener((value)=>{
+            setLastSearched(value);
         });
     }, []);
-
+    
     function handleSubmit(event) {
         event.preventDefault();
         const playerName = event.target.playerName.value
@@ -44,7 +41,7 @@ export default function SearchPlayer() {
                 <label htmlFor="nick_input">Nazwa gracza</label>
             </div>
             <datalist id="lastSearched" onDoubleClick={(e) => { console.log(e) }}>
-                {lastSearched}
+                {lastSearched.map((player, index) => <option key={index} value={player} />)}
             </datalist>
             <button type='submit'><FontAwesomeIcon icon={faSearch} /></button>
         </form>
