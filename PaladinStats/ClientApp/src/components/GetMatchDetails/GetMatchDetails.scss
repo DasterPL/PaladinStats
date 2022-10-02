@@ -157,7 +157,7 @@
         }
     }
 
-    .mapName{
+    .mapName {
         @include whiteAlphaBackground;
         border-radius: $border-radius;
         text-align: center;
@@ -212,14 +212,69 @@
             grid-template-rows: 1fr;
         }
     }
-    .chart{
-        @include large-device{
+
+    .chart {
+        @include large-device {
             width: 50%;
             margin: 0 auto;
         }
-        .chartSwitch{
+
+        .chartSwitch {
             display: grid;
-            grid-template-columns: repeat(4, 1fr) min-content;
+
+            @include xsmall-device {
+                grid-template-columns: 1fr;
+
+                & button:nth-child(1n+2) {
+                    border-radius: 0;
+                }
+
+                & button:first-child {
+                    border-radius: $border-radius $border-radius 0 0;
+                }
+
+                & button:last-child {
+                    border-radius: 0 0 $border-radius $border-radius;
+                }
+            }
+
+            @include small-device {
+                grid-template-columns: 1fr 1fr;
+
+                & button:nth-child(1n+2) {
+                    border-radius: 0;
+                }
+
+                & button:first-child {
+                    border-radius: $border-radius 0 0 0;
+                }
+
+                & button:nth-child(2) {
+                    border-radius: 0 $border-radius 0 0;
+                }
+
+                & button:last-child {
+                    grid-column: span 2;
+                    border-radius: 0 0 $border-radius $border-radius;
+                }
+            }
+
+            @include medium-device {
+                grid-template-columns: repeat(4, 1fr) min-content;
+
+                & button:nth-child(1n+2) {
+                    border-radius: 0;
+                }
+
+                & button:first-child {
+                    border-radius: $border-radius 0 0 $border-radius;
+                }
+
+                & button:last-child {
+                    border-radius: 0 $border-radius $border-radius 0;
+                    grid-column: span 1;
+                }
+            }
         }
     }
 
