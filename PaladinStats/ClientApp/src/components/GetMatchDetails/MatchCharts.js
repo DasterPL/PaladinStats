@@ -105,6 +105,8 @@ export default function MatchCharts({ matchData }) {
             case 'sort':
                 setSort(prev => !prev);
                 break;
+            default:
+                break;
         }
     }
 

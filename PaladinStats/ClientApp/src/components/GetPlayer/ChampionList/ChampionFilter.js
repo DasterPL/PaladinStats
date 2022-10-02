@@ -1,4 +1,3 @@
-import { faListSquares } from '@fortawesome/free-solid-svg-icons';
 import React, { useRef, useState } from 'react'
 
 import Damage from './roles/Damage.svg';

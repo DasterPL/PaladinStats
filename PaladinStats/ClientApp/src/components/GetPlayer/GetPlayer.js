@@ -22,22 +22,16 @@ export default function GetPlayer() {
                 axios.get(`/api/getPlayerMatchHistory/${playerName}`)
             ]);
 
-            setRender(<ViewSwitcher handleReloadClick={()=>setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
+            setRender(<ViewSwitcher handleReloadClick={() => setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
         } catch (error) {
             setRender(<ErrorNavigate error={error} />)
         }
     }
 
     useEffect(() => {
-        setRender(<Loading/>);
+        setRender(<Loading />);
         getData();
     }, [playerName, reload]);
 
     return render;
-}
-
-function arrayMove(arr, fromIndex, toIndex) {
-    var element = arr[fromIndex];
-    arr.splice(fromIndex, 1);
-    arr.splice(toIndex, 0, element);
 }

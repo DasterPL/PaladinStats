@@ -90,7 +90,7 @@ export default function ChampionList({ championData }) {
         roles.push("Paladins Obrońca");
         roles.push("Paladins Wsparcie");
       }
-      const championParams = championsList.find(c => c.id == champion.champion_id);
+      const championParams = championsList.find(c => c.id === champion.champion_id);
       return roles.includes(championParams?.Roles);
     });
     setSort(filtered);
