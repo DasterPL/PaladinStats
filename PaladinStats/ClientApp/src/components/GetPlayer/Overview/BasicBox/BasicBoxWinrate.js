@@ -1,5 +1,5 @@
 import React from 'react';
-import { WinRateCalculator } from '../../../../Calculators';
+import { WinRateCalculator } from '../../../../Utils/Calculators';
 import BasicBox from './BasicBox';
 
 export default function BasicBoxWinrate({ normal, ranked, wins, losses }) {

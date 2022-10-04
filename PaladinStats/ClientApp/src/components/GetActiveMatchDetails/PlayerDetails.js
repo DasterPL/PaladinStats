@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import { WinRateCalculator } from '../../Calculators';
+import { WinRateCalculator } from '../../Utils/Calculators';
 import ChampionIcon from '../ChampionIcon';
 import RankIcon from '../RankIcon/RankIcon';
 

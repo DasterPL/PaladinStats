@@ -1,6 +1,6 @@
 import React from 'react';
-import tiers from '../RankIcon/tiers/tiers';
-import HandleErrorImg from '../../HandleErrorImg';
+import tiers from './tiers/tiers';
+import HandleErrorImg from '../../Utils/HandleErrorImg';
 
 const ranks = [
   'Qualifying',

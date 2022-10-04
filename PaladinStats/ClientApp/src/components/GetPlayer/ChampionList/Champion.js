@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { KdaCalculator, WinRateCalculator } from '../../../Calculators';
+import { KdaCalculator, WinRateCalculator } from '../../../Utils/Calculators';
 import ChampionIcon from '../../ChampionIcon'
 
 export default function Champion({ champion }) {

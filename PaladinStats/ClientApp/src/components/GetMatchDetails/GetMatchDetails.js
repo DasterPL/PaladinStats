@@ -2,14 +2,14 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
-import FindParty from '../../FindParty';
+import FindParty from '../../Utils/FindParty';
 import ChampionIcon from '../ChampionIcon';
 import Loading from '../Loading/Loading';
 import PlayerDetails from './PlayerDetails';
 import ErrorNavigate from '../Errors/ErrorNavigate';
 import MatchCharts from './MatchCharts';
 
-import { CalculateLocalTime } from '../../Calculators';
+import { CalculateLocalTime } from '../../Utils/Calculators';
 
 import './GetMatchDetails.scss';
 

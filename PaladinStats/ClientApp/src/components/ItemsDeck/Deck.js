@@ -1,8 +1,8 @@
 import React from 'react';
-import HandleErrorImg from '../../HandleErrorImg';
+import HandleErrorImg from '../../Utils/HandleErrorImg';
 import './ItemsDeck.scss';
 
-import itemsJSON from '../../resources/items.json';
+import itemsJSON from '../../Resources/items.json';
 
 export default function Deck({ list, type, levels }) {
     const items = list.map(id => itemsJSON.find(item => item.ItemId === id));

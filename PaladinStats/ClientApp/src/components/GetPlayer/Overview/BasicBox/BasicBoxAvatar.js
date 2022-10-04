@@ -1,9 +1,9 @@
 import React from 'react';
 
 import BasicBox from './BasicBox';
-import HandleErrorImg from '../../../../HandleErrorImg';
+import HandleErrorImg from '../../../../Utils/HandleErrorImg';
 import FavoriteIcon from '../../../Favorite/FavoriteIcon';
-import altImage from '../../../../resources/altImage.png';
+import altImage from '../../../../Resources/altImage.png';
 
 export default function BasicBoxAvatar({ avatar, playerName, level, title, id }) {
   return <BasicBox className="avatar">

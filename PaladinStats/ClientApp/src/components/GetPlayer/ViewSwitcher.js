@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import ChampionList from './ChampionList/ChampionList';
 import Overview from './Overview/Overview';
 import { Route, Routes } from 'react-router';
-import useLocalStorage from '../../useLocalStorage';
+import useLocalStorage from '../../Utils/useLocalStorage';
 
 export default function ViewSwitcher({ playerData, statusData, matchData, championData, handleReloadClick }) {
     const [lastSearched, setLastSearched] = useLocalStorage('lastSearched', []);

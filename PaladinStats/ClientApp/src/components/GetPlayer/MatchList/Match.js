@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import 'moment/locale/pl';
 import { useNavigate } from 'react-router-dom';
-import { CalculateLocalTime, KdaCalculator } from '../../../Calculators';
+import { CalculateLocalTime, KdaCalculator } from '../../../Utils/Calculators';
 import ChampionIcon from '../../ChampionIcon';
 import TalentCard from '../../ItemsDeck/TalentCard';
 

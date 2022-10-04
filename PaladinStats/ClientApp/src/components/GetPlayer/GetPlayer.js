@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import './GetPlayer.scss';
-
 import Loading from '../Loading/Loading';
 import ViewSwitcher from './ViewSwitcher';
 import ErrorNavigate from '../Errors/ErrorNavigate';
+
+import './GetPlayer.scss';
 
 export default function GetPlayer() {
     const { playerName } = useParams();

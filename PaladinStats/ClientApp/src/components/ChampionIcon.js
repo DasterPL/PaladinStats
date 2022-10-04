@@ -1,6 +1,6 @@
 import React from 'react';
-import HandleErrorImg from '../HandleErrorImg';
-import champions from '../resources/champions.json';
+import HandleErrorImg from '../Utils/HandleErrorImg';
+import champions from '../Resources/champions.json';
 
 export default function ChampionIcon({ championId, className }) {
   const id = parseInt(championId);

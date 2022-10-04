@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
-import { KdaCalculator, WinRateCalculator } from '../../../Calculators';
+import { KdaCalculator, WinRateCalculator } from '../../../Utils/Calculators';
 import Champion from './Champion';
 import ChampionFilter from './ChampionFilter';
-import championsList from '../../../resources/champions.json';
+import championsList from '../../../Resources/champions.json';
 import './ChampionList.scss';
 
 export default function ChampionList({ championData }) {

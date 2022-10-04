@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { KdaCalculator } from '../../Calculators';
+import { KdaCalculator } from '../../Utils/Calculators';
 import ChampionIcon from '../ChampionIcon';
 import RankIcon from '../RankIcon/RankIcon';
 import Deck from '../ItemsDeck/Deck';
@@ -13,7 +13,6 @@ import healSelf from './img/heal_self.png';
 import gold from './img/gold.png';
 import goldPerMinute from './img/gold_time.png';
 import TalentCard from '../ItemsDeck/TalentCard';
-
 
 export default function PlayerDetails({ data, party }) {
     const navigate = useNavigate();

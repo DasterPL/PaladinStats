@@ -3,7 +3,7 @@ import { Chart, ArcElement, Title, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-import championsList from '../../../resources/champions.json';
+import championsList from '../../../Resources/champions.json';
 
 export default function ClassChart({ championData }) {
     Chart.register(ArcElement);

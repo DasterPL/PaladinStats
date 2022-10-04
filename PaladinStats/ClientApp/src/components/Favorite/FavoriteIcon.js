@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as starFill } from '@fortawesome/free-solid-svg-icons';
 import { faStar as starHollow } from '@fortawesome/free-regular-svg-icons';
 
+import useLocalStorage from '../../Utils/useLocalStorage';
 import './Favorite.scss';
-import useLocalStorage from '../../useLocalStorage';
 
 export default function FavoriteIcon({ playerName, avatar, id }) {
     const [favoritesIcon, setFavoritesIcon] = useState(starHollow);

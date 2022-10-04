@@ -1,5 +1,5 @@
 import React from 'react';
-import { KdaCalculator } from '../../../../Calculators';
+import { KdaCalculator } from '../../../../Utils/Calculators';
 import BasicBox from './BasicBox';
 
 export default function BasicBoxKda({ playerChampionRanks }) {

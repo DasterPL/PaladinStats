@@ -1,6 +1,6 @@
 import React from 'react'
-import HandleErrorImg from '../../HandleErrorImg';
-import items from '../../resources/items.json';
+import HandleErrorImg from '../../Utils/HandleErrorImg';
+import items from '../../Resources/items.json';
 
 export default function TalentCard({ talent }) {
   const talentItem = items.find(item => item.ItemId === talent);

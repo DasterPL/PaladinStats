@@ -1,9 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router'
-import useLocalStorage from '../../useLocalStorage';
-import HandleErrorImg from '../../HandleErrorImg';
+import useLocalStorage from '../../Utils/useLocalStorage';
+import HandleErrorImg from '../../Utils/HandleErrorImg';
 import './Favorite.scss';
-
 
 const SortablePlayerItem = ({ id, avatar, name }) => {
     const navigate = useNavigate();
