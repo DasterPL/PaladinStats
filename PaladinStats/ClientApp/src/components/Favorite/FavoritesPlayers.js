@@ -1,17 +1,30 @@
-import React from 'react'
-import { useNavigate } from 'react-router';
-import HandleErrorImg from '../../HandleErrorImg';
+import React from 'react';
+import { useNavigate } from 'react-router'
 import useLocalStorage from '../../useLocalStorage';
+import HandleErrorImg from '../../HandleErrorImg';
 import './Favorite.scss';
 
-export default function FavoritesPlayers() {
-    const navigate = useNavigate();
-    const [favourites, setFavourites] = useLocalStorage('favouritesPlayers', []);
 
-    return favourites.length > 0 ? <ul className='favoritesPlayers'>
-        {favourites.map(({ name, avatar, id }, index) => <li key={index} onClick={() => { navigate(`/player/${id}`) }}>
+const SortablePlayerItem = ({ id, avatar, name }) => {
+    const navigate = useNavigate();
+    return (
+        <li onClick={() => { navigate(`/player/${id}`) }}>
             <img onError={HandleErrorImg} src={avatar} alt='' />
             <span>{name}</span>
-        </li>)}
-    </ul> : null;
+        </li>
+    )
 }
+
+const FavoritesPlayersList = ({ favourites }) => {
+    return <ul className='favoritesPlayers'>
+        {favourites.map(({ name, avatar, id }) => <SortablePlayerItem key={id} name={name} avatar={avatar} id={id} />)}
+    </ul>;
+}
+
+export default function FavoritesPlayers() {
+    const [favourites, setFavourites] = useLocalStorage('favouritesPlayers', []);
+    if (favourites.length === 0) {
+        return null;
+    }
+    return <FavoritesPlayersList favourites={favourites} />
+};

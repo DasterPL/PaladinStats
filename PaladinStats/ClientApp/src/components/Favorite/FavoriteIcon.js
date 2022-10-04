@@ -21,6 +21,8 @@ export default function FavoriteIcon({ playerName, avatar, id }) {
     useEffect(() => {
         if (favoriteIndex !== -1) {
             setFavoritesIcon(starFill);
+            const updateFav = favourites.filter(value => value.id !== id);
+            setFavourites([player, ...updateFav]);
         }
     }, []);
 
