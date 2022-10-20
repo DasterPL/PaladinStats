@@ -13,24 +13,26 @@ export default function GetPlayer() {
     const [render, setRender] = useState(null);
     const [reload, setReload] = useState(false);
 
-    async function getData() {
-        try {
-            const getPlayer = await axios.get(`/api/getPlayer/${playerName}`);
-            const [getPlayerChampionRanks, getPlayerStatus, getPlayerMatchHistory] = await Promise.all([
-                axios.get(`/api/getPlayerChampionRanks/${playerName}`),
-                axios.get(`/api/getPlayerStatus/${playerName}`),
-                axios.get(`/api/getPlayerMatchHistory/${playerName}`)
-            ]);
-
-            setRender(<ViewSwitcher handleReloadClick={() => setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
-        } catch (error) {
-            setRender(<ErrorNavigate error={error} />)
-        }
-    }
-
     useEffect(() => {
         setRender(<Loading />);
+        const controllers = [new AbortController(), new AbortController(), new AbortController(), new AbortController()];
+        const getData = async () => {
+            try {
+                const getPlayer = await axios.get(`/api/getPlayer/${playerName}`, { signal: controllers[0].signal });
+                const [getPlayerChampionRanks, getPlayerStatus, getPlayerMatchHistory] = await Promise.all([
+                    axios.get(`/api/getPlayerChampionRanks/${playerName}`, { signal: controllers[1].signal }),
+                    axios.get(`/api/getPlayerStatus/${playerName}`, { signal: controllers[2].signal }),
+                    axios.get(`/api/getPlayerMatchHistory/${playerName}`, { signal: controllers[3].signal })
+                ]);
+                setRender(<ViewSwitcher handleReloadClick={() => setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
+            } catch (error) {
+                setRender(<ErrorNavigate error={error} />)
+            }
+        }
         getData();
+        return () => {
+            controllers.forEach(controller => controller.abort());
+        }
     }, [playerName, reload]);
 
     return render;
