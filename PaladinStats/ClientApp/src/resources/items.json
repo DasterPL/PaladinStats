@@ -1316,7 +1316,7 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Skorupa ochronna] Za każde wchłonięte 800 pkt. obrażeń skraca czas odnowienia Skorupy ochronnej o {scale=0.2|0.2}s.",
+    "Description": "[Skorupa Ochronna] Za każde wchłonięte 1000 pkt. obrażeń skraca czas odnowienia Skorupy Ochronnej o {scale=0.2|0.2} sek.",
     "DeviceName": "Rafa koralowa",
     "IconId": 4844,
     "ItemId": 14864,
@@ -4354,6 +4354,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Skraca czas odnowienia Ciała i Duszy o {scale=0.6|0.6} sek.",
+    "DeviceName": "Bez ograniczeń",
+    "IconId": 11680,
+    "ItemId": 31314,
+    "Price": 0,
+    "ShortDesc": "Skraca czas odnowienia Ciała i Duszy o {scale=0.6|0.6} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/limitless.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Bomby w cień] Generuje {scale=1|1} szt. amunicji po trafieniu co najmniej jednego wroga Bombami w cień.",
     "DeviceName": "Bez szans",
     "IconId": 9628,
@@ -5166,16 +5180,30 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Krzątanina] Po aktywacji Krzątaniny zwiększa szybkość ruchu o {scale=10|10}% na 1,5 s.",
+    "Description": "[Krzątanina] Po wyłączeniu Krzątaniny zwiększa szybkość ruchu o {scale=10|10}% na 1,5 sek.",
     "DeviceName": "Drugi oddech",
     "IconId": 4713,
     "ItemId": 14454,
     "Price": 0,
-    "ShortDesc": "[Krzątanina] Zwiększa szybkość Krzątaniny przez krótki okres po aktywacji.",
+    "ShortDesc": "[Krzątanina] Zwiększa szybkość przez krótki okres po wyłączeniu Krzątaniny.",
     "champion_id": 2285,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/second-wind.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
-    "recharge_seconds": 12,
+    "recharge_seconds": 10,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Wydłuża czas trwania Ciała i Duszy o {scale=0.1|0.1} sek.",
+    "DeviceName": "Duchowy Syfon",
+    "IconId": 11683,
+    "ItemId": 31317,
+    "Price": 0,
+    "ShortDesc": "Wydłuża czas trwania Ciała i Duszy o {scale=0.1|0.1} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/soul-siphon.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
     "ret_msg": null,
     "talent_reward_level": 0
   },
@@ -6342,6 +6370,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Zwiększa twoją szybkość ruchu o {scale=10|10}% na 2 sek. po każdej aktywacji Duchowej Przynęty.",
+    "DeviceName": "Krwawa Mgła",
+    "IconId": 11679,
+    "ItemId": 31313,
+    "Price": 0,
+    "ShortDesc": "Zwiększa twoją szybkość ruchu o {scale=10|10}% na 2 sek. po każdej aktywacji Duchowej Przynęty.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/blood-mist.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Pancerz] Zwiększa wartość dodatkowego zdrowia z krwi o {scale=250|250} przy jednoczesnym obniżeniu jego podstawowego poziomu o {scale=125|125}.",
     "DeviceName": "Krwawe działo",
     "IconId": 11251,
@@ -6902,6 +6944,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Zwiększa pole rażenia wybuchu Duchowej Przynęty o {scale=5|5}%.",
+    "DeviceName": "Mimowolna Ofiara",
+    "IconId": 11677,
+    "ItemId": 31311,
+    "Price": 0,
+    "ShortDesc": "Zwiększa pole rażenia wybuchu Duchowej Przynęty o {scale=5|5}%.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/unwilling-victim.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Nieważkość] Wydłuża czas trwania Nieważkości o {scale=0.4|0.4} s.",
     "DeviceName": "Mistrz ucieczek",
     "IconId": 4136,
@@ -7098,6 +7154,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Wydłuża czas trwania kumulacji Klątwy o {scale=0.6|0.6} sek.",
+    "DeviceName": "Nagła Śmierć",
+    "IconId": 11691,
+    "ItemId": 31321,
+    "Price": 0,
+    "ShortDesc": "Wydłuża czas trwania kumulacji Klątwy o {scale=0.6|0.6} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/sudden-death.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Broń] Zwiększa szybkość przeładowania o {scale=5|5}%.",
     "DeviceName": "Naoliwiony",
     "IconId": 5634,
@@ -7246,6 +7316,20 @@
     "ShortDesc": "[Wdzięk] Zwiększa szybkość ruchu, jeśli znajdujesz się pod wpływem Wdzięku.",
     "champion_id": 2417,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/heir-to-the-throne.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Leczy za {scale=17|17} PZ co 0,25 sek. podczas trwania Ciała i Duszy.",
+    "DeviceName": "Nawiedzenie w Blasku Księżyca",
+    "IconId": 11682,
+    "ItemId": 31316,
+    "Price": 0,
+    "ShortDesc": "Leczy za {scale=17|17} PZ co 0,25 sek. podczas trwania Ciała i Duszy.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/moonlit-haunting.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
     "ret_msg": null,
@@ -7498,6 +7582,20 @@
     "ShortDesc": "[Postawa smoka] Wrogowie trafieni Pazurami mają zmniejszone leczenie.",
     "champion_id": 2493,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/unyielding.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Wydłuża czas trwania rozbrojenia nakładanego przez Dzikie Rozdarcie po trafieniu przeciwnika z maksymalną liczbą kumulacji Klątwy o {scale=10|10}%.",
+    "DeviceName": "Niewidoczne Oczy",
+    "IconId": 11684,
+    "ItemId": 31306,
+    "Price": 0,
+    "ShortDesc": "Wydłuża czas trwania rozbrojenia nakładanego przez Dzikie Rozdarcie po trafieniu przeciwnika z maksymalną liczbą kumulacji Klątwy o {scale=10|10}%.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/unseen-eyes.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
     "ret_msg": null,
@@ -7924,6 +8022,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Uzdrawia za {scale=50|50} PZ przy każdej aktywacji Duchowej Przynęty.",
+    "DeviceName": "Ogień Duszy",
+    "IconId": 11678,
+    "ItemId": 31312,
+    "Price": 0,
+    "ShortDesc": "Uzdrawia za {scale=50|50} PZ przy każdej aktywacji Duchowej Przynęty.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/soulfire.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Granat odłamkowy] Trafienie wroga Granatem odłamkowym wytwarza {scale=6|6} szt. amunicji.",
     "DeviceName": "Ogień w jamie",
     "IconId": 4902,
@@ -8086,6 +8198,20 @@
     "ShortDesc": "Zmniejsza czas odnowienia Oplątania po użyciu Przewrotu.",
     "champion_id": 2549,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/latch-and-fire.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Zwiększa poziom maks. zdrowia o {scale=50|50} PZ.",
+    "DeviceName": "Opowieści Ludowe",
+    "IconId": 11688,
+    "ItemId": 31318,
+    "Price": 0,
+    "ShortDesc": "Zwiększa poziom maks. zdrowia o {scale=50|50} PZ.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/folk-tales.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
     "ret_msg": null,
@@ -9124,6 +9250,20 @@
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/cursed-weaponry.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Nakłada 3 kumulacje Klątwy na cel trafiony Dzikim Rozdarciem. Efekt może występować wyłącznie raz na {scale=30|-5} sek.",
+    "DeviceName": "Przeklęta Laleczka",
+    "IconId": 11687,
+    "ItemId": 31309,
+    "Price": 0,
+    "ShortDesc": "Nakłada 3 kumulacje Klątwy na cel trafiony Dzikim Rozdarciem. Efekt może występować wyłącznie raz na {scale=30|-5} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/cursed-doll.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 30,
     "ret_msg": null,
     "talent_reward_level": 0
   },
@@ -11732,6 +11872,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Trafienie wroga Laleczką Yokai nakłada jedną dodatkową kumulację Klątwy raz na {scale=30|-5} sek.",
+    "DeviceName": "Wszechobecny Strach",
+    "IconId": 11690,
+    "ItemId": 31320,
+    "Price": 0,
+    "ShortDesc": "Trafienie wroga Laleczką Yokai nakłada jedną dodatkową kumulację Klątwy raz na {scale=30|-5} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/surrounded-by-fear.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 30,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Przewrót] Zwiększa pokonywany dystans podczas używania Przewrotu o {scale=10|10}%.",
     "DeviceName": "Wtargnięcie",
     "IconId": 4181,
@@ -11852,6 +12006,20 @@
     "ShortDesc": "Zwiększa szybkość Skoku dowódczyni Octavii.",
     "champion_id": 2540,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/high-ground.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Twoje Dzikie Rozdarcie zadaje dodatkowych {scale=2|2}% obrażeń za każdą kumulację Klątwy na celu. ",
+    "DeviceName": "Wyssanie Esencji",
+    "IconId": 11686,
+    "ItemId": 31308,
+    "Price": 0,
+    "ShortDesc": "Twoje Dzikie Rozdarcie zadaje dodatkowych {scale=2|2}% obrażeń za każdą kumulację Klątwy na celu. ",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/essence-drain.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
     "ret_msg": null,
@@ -12006,6 +12174,34 @@
     "ShortDesc": "",
     "champion_id": 2538,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/deadly-pursuit.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Zwiększa twoją szybkość ruchu na 2 sek. o {scale=10|10}% po zakończeniu Ciała i Duszy.",
+    "DeviceName": "Zabójcza Przynęta",
+    "IconId": 11681,
+    "ItemId": 31315,
+    "Price": 0,
+    "ShortDesc": "Zwiększa twoją szybkość ruchu na 2 sek. o {scale=10|10}% po zakończeniu Ciała i Duszy.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/deadly-prey.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Skraca czas odnowienia ponownej aktywacji Duchowej Przynęty o {scale=0.6|0.6} sek.",
+    "DeviceName": "Zabójcza Pułapka",
+    "IconId": 11676,
+    "ItemId": 31310,
+    "Price": 0,
+    "ShortDesc": "Skraca czas odnowienia ponownej aktywacji Duchowej Przynęty o {scale=0.6|0.6} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/deadly-trap.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
     "ret_msg": null,
@@ -12250,6 +12446,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Uzdrawia za {scale=35|35} po tym, gdy wróg przetrwa trafienie Laleczką Yokai lub Dzikim Rozdarciem przy maksymalnej kumulacji Klątwy.",
+    "DeviceName": "Zapieczętowany Los",
+    "IconId": 11689,
+    "ItemId": 31319,
+    "Price": 0,
+    "ShortDesc": "Uzdrawia za {35|35} PZ przy trafieniu wroga z maks. liczbą kumulacji Klątwy zdolnościami Laleczka Yokai lub Dzikie Rozdarcie.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/sealed-fate.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Strzał siecią] Zwiększa czas trwania spowolnienia spowodowanego Strzałem siecią o {scale=0.3|0.3} s.",
     "DeviceName": "Zaplątanie",
     "IconId": 4546,
@@ -12468,6 +12678,20 @@
     "ShortDesc": "[Pancerz] Zyskuje zdrowie.",
     "champion_id": 2540,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/determined-defense.jpg",
+    "item_type": "Inventory Vendor - Champion Cards",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
+    "Description": "Skraca czas odnowienia Dzikiego Rozdarcia o {scale=0.5|0.5} sek.",
+    "DeviceName": "Zdrada",
+    "IconId": 11685,
+    "ItemId": 31307,
+    "Price": 0,
+    "ShortDesc": "Skraca czas odnowienia Dzikiego Rozdarcia o {scale=0.5|0.5} sek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/betrayal.jpg",
     "item_type": "Inventory Vendor - Champion Cards",
     "recharge_seconds": 0,
     "ret_msg": null,
@@ -12796,7 +13020,7 @@
     "talent_reward_level": 8
   },
   {
-    "Description": "[Pnącze] Pnącze zyskuje drugi ładunek.",
+    "Description": "[Pnącze] Pnącze zyskuje dodatkowy ładunek, a jego czas odnowienia zostaje wydłużony o 2 sek.",
     "DeviceName": "Bezlitosna obecność",
     "IconId": 9258,
     "ItemId": 25569,
@@ -12810,7 +13034,7 @@
     "talent_reward_level": 2
   },
   {
-    "Description": "[Światło Księżyca] Sojusznicy leczeni Światłem Księżyca otrzymują o 15% mniej obrażeń.",
+    "Description": "[Światło Księżyca] Sojusznicy leczeni Światłem Księżyca otrzymują o 15% mniej obrażeń. Zwiększa leczenie Światła Księżyca do 150 co 0,15 sek.",
     "DeviceName": "Błogosławieństwo bogini",
     "IconId": 8506,
     "ItemId": 24674,
@@ -12978,6 +13202,20 @@
     "talent_reward_level": 2
   },
   {
+    "Description": "Duchowe Przynęty zostają zamienione na miny z mechanizmem czasowym. Nie możesz już ich ponownie aktywować – zamiast tego pułapka eksploduje po krótkim czasie od jej wyzwolenia, zadając obrażenia, wywołując strach i nakładając kumulacje Klątwy. Umieszczanie pułapek ma teraz większy czas odnowienia.",
+    "DeviceName": "Duchowe Bomby",
+    "IconId": 11632,
+    "ItemId": 31304,
+    "Price": 0,
+    "ShortDesc": "Duchowe Przynęty stają się minami z mechanizmem czasowym. Nie możesz ich reaktywować, eksplodują krótko od wyzwolenia, powodując obrażenia, strach i nakładając kumulacje Klątwy. Zwiększa się czas odnowienia pułapek.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/spirit-bombs.jpg",
+    "item_type": "Inventory Vendor - Talents",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 2
+  },
+  {
     "Description": "[Wycofanie] Przez 4 s po trafieniu wroga Wycofaniem twoje strzały z broni zadają dodatkowe obrażenia w wysokości 8% jego maks. zdrowia.",
     "DeviceName": "Duża zwierzyna",
     "IconId": 5565,
@@ -13020,12 +13258,12 @@
     "talent_reward_level": 2
   },
   {
-    "Description": "[Ochrona] Zwiększa odporność tarczy Ochrony o 300 pkt.",
+    "Description": "[Ochrona] Zwiększa wytrzymałość tarczy Ochrony o 300 pkt. i skraca jej czas odnowienia o 1 sek.",
     "DeviceName": "Dzięki, dziadku",
     "IconId": 7169,
     "ItemId": 20099,
     "Price": 0,
-    "ShortDesc": "Zwiększa odporność Tarczy Ochrony",
+    "ShortDesc": "Zwiększa wytrzymałość i skraca czas odnowienia tarczy Ochrony.",
     "champion_id": 2322,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/thanks-grandpa.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -13160,7 +13398,7 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Okaleczający rzut] Okaleczający rzut działa teraz łańcuchowo na pobliskich wrogów maks. 2 razy, powodując pojawienie się wokół nich aury uzdrawiającej, leczącej pobliskich sojuszników za 50 co 0,5 sek.",
+    "Description": "[Okaleczający rzut] Okaleczający rzut działa teraz łańcuchowo na pobliskich wrogów maks. 2 razy, powodując pojawienie się wokół nich i oryginalnego celu aury uzdrawiającej, leczącej pobliskich sojuszników za 50 co 0,5 sek.",
     "DeviceName": "Głębokie korzenie",
     "IconId": 5580,
     "ItemId": 16582,
@@ -13286,7 +13524,7 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Wybuchowy flakon] Cele trafione Wybuchowym flakonem odnoszą o 30% więcej obrażeń od strzałów z twojej broni przez 4 s.",
+    "Description": "[Wybuchowy Flakon] Cele trafione Wybuchowym Flakonem odnoszą o 30% więcej obrażeń od strzałów z twojej broni przez 4 sek.",
     "DeviceName": "Katalizator",
     "IconId": 5596,
     "ItemId": 16391,
@@ -13398,12 +13636,12 @@
     "talent_reward_level": 2
   },
   {
-    "Description": "[Broń] Zwiększa promień eksplozji Lepkiej bomby o 20%.",
+    "Description": "[Broń] Zwiększa promień eksplozji Lepkiej Bomby o 20%, jednak zmniejsza jej maks. liczbę amunicji o 2.",
     "DeviceName": "Królewscy poddani",
     "IconId": 7153,
     "ItemId": 20216,
     "Price": 0,
-    "ShortDesc": "Zwiększa rozmiar eksplozji Lepkiej bomby.",
+    "ShortDesc": "Zwiększa rozmiar eksplozji Lepkiej Bomby i zmniejsza jej maks. liczbę amunicji.",
     "champion_id": 2281,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/royal-subjects.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -13454,7 +13692,7 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Pradawny szał] Zwiększa szybkość ładowania twojej arcyzdolności o 25%, a twoje maks. zdrowie o 500 PZ. Aktywacja Pradawnego szału resetuje czas odnowienia Drenującej kotwicy i Obrotu skorupy.",
+    "Description": "[Pradawny Szał] Zwiększa szybkość ładowania arcyzdolności o 25%, a zdrowie o 500 PZ. Aktywacja Pradawnego Szału resetuje czas odnowienia Drenującej Kotwicy i Obrotu Skorupy oraz zwiększa szybkość ruchu o 20%.",
     "DeviceName": "Lewiatan",
     "IconId": 5590,
     "ItemId": 16432,
@@ -13524,12 +13762,12 @@
     "talent_reward_level": 8
   },
   {
-    "Description": "[Mikstura lecznicza] Leczenie od Mikstury leczniczej zostaje zwiększone o 130%.",
+    "Description": "[Mikstura Lecznicza] Uzdrawianie Mikstury Leczniczej zostaje zwiększone o 100% i teraz zapewnia ona kumulujące się 200 pkt. tarczy.",
     "DeviceName": "Megamikstura",
     "IconId": 5597,
     "ItemId": 16376,
     "Price": 0,
-    "ShortDesc": "Mikstura lecznicza przywraca sojusznikom więcej PZ.",
+    "ShortDesc": "Mikstura Lecznicza uzdrawia teraz więcej i zapewnia tarczę.",
     "champion_id": 2056,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/mega-potion.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -13636,6 +13874,20 @@
     "talent_reward_level": 0
   },
   {
+    "Description": "Wydłuża czas działania twojego Ciała i Duszy o 1 s. Gdy zdolność dobiegnie końca, otrzymasz leczenie w wysokości 70% obrażeń, jakie zostały ci zadane podczas podróży. Kauteryzacja nie ma wpływu na ten efekt.",
+    "DeviceName": "Niedokończone Sprawy",
+    "IconId": 11633,
+    "ItemId": 31305,
+    "Price": 0,
+    "ShortDesc": "Wydłuża czas działania twojego Ciała i Duszy o 1 sek. Gdy zdolność dobiegnie końca, otrzymasz leczenie w wysokości 70% obrażeń, jakie zostały ci zadane podczas podróży. Kauteryzacja nie ma wpływu na ten efekt.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/unfinished-business.jpg",
+    "item_type": "Inventory Vendor - Talents",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 8
+  },
+  {
     "Description": "[Pancerz] Stojąc na celu, odzyskujesz 25 PZ co 0,25 s oraz przez 1 s po zostawieniu celu. Efekt ten wzmacnia się, im dłużej go utrzymujesz, do maks. wartości 65 co 0,25 s.",
     "DeviceName": "Nienaturalna wytrwałość",
     "IconId": 9369,
@@ -13734,12 +13986,12 @@
     "talent_reward_level": 8
   },
   {
-    "Description": "[Ukrycie] Zmniejsza tempo zużycia energii Ukrycia o 50%.",
+    "Description": "[Kamuflaż] Zmniejsza tempo zużycia energii Kamuflażu o 50% i zwiększa szybkość ruchu o 20% w jego trakcie.",
     "DeviceName": "Nocne życie",
     "IconId": 6581,
     "ItemId": 19468,
     "Price": 0,
-    "ShortDesc": "Pasek ukrycia kurczy się wolniej.",
+    "ShortDesc": "Twój pasek Kamuflażu zużywa się wolniej, a w jego trakcie poruszasz się szybciej.",
     "champion_id": 2438,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/nocturnal.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -13804,7 +14056,7 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Guardian Spirit] [Duch opiekuńczy] Luna przywraca okolicznym sojusznikom 300 PZ na sekundę.",
+    "Description": "[Guardian Spirit] [Duch Opiekuńczy] Luna przywraca okolicznym sojusznikom 320 PZ na sekundę.",
     "DeviceName": "Ogniwo życia",
     "IconId": 8505,
     "ItemId": 24673,
@@ -14112,12 +14364,12 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Rewolwer] Twój Rewolwer nakłada efekt, który trwa przez 1,3 s i zadaje obrażenia co 0,115 s – a obrażenia rosną, im dłużej pozostaje na przeciwniku. Maks. obrażenia na trafienie wynoszą 30.",
+    "Description": "[Broń] Twój Rewolwer nakłada efekt krwawienia, który trwa 1 sek. i zadaje obrażenia co 0,1 sek. – obrażenia rosną, im dłużej pozostaje na przeciwniku. Maks. obrażenia na 0,1 sek. wynoszą 20. Kolejne trafienia odświeżają czas trwania zdolności.",
     "DeviceName": "Przeklęty rewolwer",
     "IconId": 5555,
     "ItemId": 16369,
     "Price": 0,
-    "ShortDesc": "Tryb automatyczny",
+    "ShortDesc": "Rewolwer z każdym trafieniem nakłada teraz kumulujące się obrażenia w czasie.",
     "champion_id": 2205,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/cursed-revolver.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -14140,12 +14392,12 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "Przeciąż „Dekret 77”. Arcyzdolność nie będzie już wystraszać wrogów, jej obrażenia we wrogów i pobliskie cele w niedużym zasięgu wzrosną jednak do 1100 po oznaczaniu przez 0,8 sek. Teraz arcyzdolność będzie się również ładować 50% szybciej.",
+    "Description": "Doprowadź swój Bosak do przeciążenia, aby teraz przyciągać czempionów niebędących obrońcami do VII. Obrażenia Bosaka zostają zmniejszone o 100, jego liczba ładunków do 1, a czas odnowienia o 2 sek.",
     "DeviceName": "Przeładowany",
     "IconId": 10084,
     "ItemId": 27930,
     "Price": 0,
-    "ShortDesc": "",
+    "ShortDesc": "Bosak teraz przyciąga czempionów niebędących obrońcami, jednak zadaje 100 pkt. obrażeń i ma 1 ładunek.",
     "champion_id": 2549,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/overcharged.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -14434,12 +14686,12 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Broń] Karabin zadaje teraz dodatkowo 50 obrażeń w ciągu 3 s trafionym wrogom. Efekt kumuluje się 3 razy i odświeża po trafieniu, jednak tracisz możliwość trafienia w głowę.",
+    "Description": "[Broń] Karabin zyskuje celność bez lunety, ale zadaje 900 pkt. obrażeń, jego efektywny zasięg spada do 200 i zadaje 50 pkt. obrażeń od poparzeń przez 1,5 s. Efekt kumuluje się 3 razy i odświeża po trafieniu.",
     "DeviceName": "Sokoli wzrok",
     "IconId": 6580,
     "ItemId": 19477,
     "Price": 0,
-    "ShortDesc": "Zmniejsza obrażenia podstawowe i dodaje kropkę celowniczą podczas strzałów z karabinu.",
+    "ShortDesc": "Strzały z karabinu mają zmniejszone obrażenia podstawowe, większą celność w trybie bez celownika i zyskują obrażenia w czasie.",
     "champion_id": 2438,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/crack-shot.jpg",
     "item_type": "Inventory Vendor - Talents",
@@ -14784,7 +15036,7 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Pierwotny wzrok] Każdy impuls zapewnia sojuszniczym graczom w zasięgu Pierwotnego wzroku kumulację tarczy o odporności 125 pkt. i 15% wzrost szybkości ruchu na 4 s – jednak czas odnowienia Pierwotnej mocy wzrasta o 2 s.",
+    "Description": "[Pierwotny Wzrok] Każdy impuls zapewnia sojuszniczym graczom w zasięgu Pierwotnego Wzroku kumulację tarczy o wytrzymałości 90 pkt. i 15% wzrost szybkości ruchu na 4 sek. – jednak czas odnowienia Pierwotnej Mocy wzrasta o 2 sek.",
     "DeviceName": "Widzenie rodzi siłę",
     "IconId": 9370,
     "ItemId": 26700,
@@ -14952,6 +15204,20 @@
     "talent_reward_level": 2
   },
   {
+    "Description": "Zwiększ szybkość ataku o 5% i szybkość ruchu o 5% za każdą kumulację Klątwy aktualnie aktywną na wrogach.",
+    "DeviceName": "Wzmocniona Klątwa",
+    "IconId": 11631,
+    "ItemId": 31303,
+    "Price": 0,
+    "ShortDesc": "Zwiększ szybkość ataku o 5% i szybkość ruchu o 5% za każdą kumulację Klątwy aktualnie aktywną na wrogach.",
+    "champion_id": 2555,
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/empowered-curse.jpg",
+    "item_type": "Inventory Vendor - Talents",
+    "recharge_seconds": 0,
+    "ret_msg": null,
+    "talent_reward_level": 0
+  },
+  {
     "Description": "[Przekora] Trafienia Rewolwerem zwiększają obrażenia następnego ataku Przekorą o 15% (maks. o 100%).",
     "DeviceName": "Wzniesiona pięść",
     "IconId": 7146,
@@ -15008,7 +15274,7 @@
     "talent_reward_level": 2
   },
   {
-    "Description": "[Roztrzaskanie] Roztrzaskanie teraz natychmiast przywraca celowi 700 PZ, ale jego czas odnowienia jest dłuższy o 1 s i nie powoduje już eksplozji Iluzji. Skraca czas trwania odnowienia Roztrzaskania o 2 s, jeśli spudłujesz.",
+    "Description": "[Roztrzaskanie] Roztrzaskanie teraz natychmiast przywraca celowi 800 PZ, ale jego czas odnowienia jest dłuższy o 1 s i nie powoduje już eksplozji Iluzji. Skraca czas trwania odnowienia Roztrzaskania o 2 s, jeśli spudłujesz.",
     "DeviceName": "Zamiana żyć",
     "IconId": 7175,
     "ItemId": 20359,
@@ -15246,12 +15512,12 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Mikstura lecznicza] Leczenie od Mikstury leczniczej zostaje zwiększone o 130%.",
+    "Description": "[Mikstura Lecznicza] Uzdrawianie Mikstury Leczniczej zostaje zwiększone o 100% i teraz zapewnia ona kumulujące się 200 pkt. tarczy.",
     "DeviceName": "Megamikstura",
     "IconId": 5597,
     "ItemId": 16376,
     "Price": 0,
-    "ShortDesc": "Mikstura lecznicza przywraca sojusznikom więcej PZ.",
+    "ShortDesc": "Mikstura Lecznicza uzdrawia teraz więcej i zapewnia tarczę.",
     "champion_id": 2056,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/mega-potion.jpg",
     "item_type": "Inventory Vendor - Talents Default",
@@ -15302,12 +15568,12 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Ukrycie] Zmniejsza tempo zużycia energii Ukrycia o 50%.",
+    "Description": "[Kamuflaż] Zmniejsza tempo zużycia energii Kamuflażu o 50% i zwiększa szybkość ruchu o 20% w jego trakcie.",
     "DeviceName": "Nocne życie",
     "IconId": 6581,
     "ItemId": 19468,
     "Price": 0,
-    "ShortDesc": "Pasek ukrycia kurczy się wolniej.",
+    "ShortDesc": "Twój pasek Kamuflażu zużywa się wolniej, a w jego trakcie poruszasz się szybciej.",
     "champion_id": 2438,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/nocturnal.jpg",
     "item_type": "Inventory Vendor - Talents Default",
@@ -15372,12 +15638,12 @@
     "talent_reward_level": 0
   },
   {
-    "Description": "[Rewolwer] Twój Rewolwer nakłada efekt, który trwa przez 1,3 s i zadaje obrażenia co 0,115 s – a obrażenia rosną, im dłużej pozostaje na przeciwniku. Maks. obrażenia na trafienie wynoszą 30.",
+    "Description": "[Broń] Twój Rewolwer nakłada efekt krwawienia, który trwa 1 sek. i zadaje obrażenia co 0,1 sek. – obrażenia rosną, im dłużej pozostaje na przeciwniku. Maks. obrażenia na 0,1 sek. wynoszą 20. Kolejne trafienia odświeżają czas trwania zdolności.",
     "DeviceName": "Przeklęty rewolwer",
     "IconId": 5555,
     "ItemId": 16369,
     "Price": 0,
-    "ShortDesc": "Tryb automatyczny",
+    "ShortDesc": "Rewolwer z każdym trafieniem nakłada teraz kumulujące się obrażenia w czasie.",
     "champion_id": 2205,
     "itemIcon_URL": "https://webcdn.hirezstudios.com/paladins/champion-cards/cursed-revolver.jpg",
     "item_type": "Inventory Vendor - Talents Default",
