@@ -7,7 +7,7 @@ import Support from './roles/Support.svg';
 
 export default function ChampionFilter({ onRoleClick, onTextChange }) {
     const ref = useRef(null);
-    const [championFilterByName, setChampionFilterByName] = useState();
+    const [championFilterByName, setChampionFilterByName] = useState("");
 
     function handleChange() {
         setChampionFilterByName('');
