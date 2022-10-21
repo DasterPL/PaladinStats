@@ -20,7 +20,7 @@ export default function App() {
             <header>
                 <Logo />
             </header>
-            <section className='container'>
+            <main className='container'>
                 <SearchPlayer />
                 <Routes>
                     <Route exact path='/' element={null} />
@@ -30,7 +30,7 @@ export default function App() {
                     <Route path='/error/:code' element={<ErrorPage />} />
                     <Route path='*' element={<ErrorPage error="404" />} />
                 </Routes>
-            </section>
+            </main>
         </Router>
         <CookieConsent buttonText='OK' buttonClasses='button' disableButtonStyles={true} buttonStyle={{ margin: '0.3em' }} >Ta strona wykorzystuje pliki cookies</CookieConsent>
         <footer>
