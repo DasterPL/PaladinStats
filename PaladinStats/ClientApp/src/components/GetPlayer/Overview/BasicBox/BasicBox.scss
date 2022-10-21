@@ -107,9 +107,16 @@
 
     &.status {
         font-size: 1.6em;
+        display: flex;
 
         &::before {
             content: "Status";
+        }
+    }
+    &.playTime {
+        font-size: 1.6em;
+        &::before{
+            content: 'Czas gry';
         }
     }
 

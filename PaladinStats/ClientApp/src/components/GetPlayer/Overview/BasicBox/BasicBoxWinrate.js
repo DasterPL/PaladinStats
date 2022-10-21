@@ -4,7 +4,7 @@ import BasicBox from './BasicBox';
 
 export default function BasicBoxWinrate({ normal, ranked, wins, losses }) {
   const winRate = WinRateCalculator(wins, losses);
-  return <BasicBox className={'basicBox winRate' + (normal ? ' normal' : ranked ? ' ranked' : '')}>
+  return <BasicBox className={'winRate' + (normal ? ' normal' : ranked ? ' ranked' : '')}>
     <div className='twoRow wins'>
       <span>Wygrane</span>
       <span>{wins}</span>

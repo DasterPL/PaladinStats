@@ -1,8 +1,10 @@
+import moment from 'moment';
 import React from 'react';
 import { useNavigate } from 'react-router';
 import BasicBox from './BasicBox';
 
-export default function BasicBoxStatus({ status }) {
+export default function BasicBoxStatus({ status, lastLogin }) {
+    const lastLoginString = moment(lastLogin).fromNow(true);
     const navigate = useNavigate();
     function handleClick(event) {
         const link = `/activematch/${status.Match}`;
@@ -14,7 +16,10 @@ export default function BasicBoxStatus({ status }) {
     }
     switch (status?.status) {
         case 0:
-            return <BasicBox className='status'>Offline</BasicBox>;
+            return <BasicBox className='status'>
+                <span>Offline</span>
+                <span>{lastLoginString}</span>
+            </BasicBox>;
         case 1:
             return <BasicBox className='status'>W poczekalni</BasicBox>;
         case 2:
