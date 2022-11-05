@@ -10,9 +10,6 @@ export default function NawBar({ handleReloadClick }) {
 
     const pathname = `/player/${playerName}`;
 
-    // function handleReloadClick() {
-    //     window.location.reload();
-    // }
     function isActive(linkPath) {
         return linkPath === location ? 'active' : '';
     }
