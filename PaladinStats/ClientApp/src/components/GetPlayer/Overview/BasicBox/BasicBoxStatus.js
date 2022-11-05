@@ -4,8 +4,14 @@ import { useNavigate } from 'react-router';
 import BasicBox from './BasicBox';
 
 export default function BasicBoxStatus({ status, lastLogin }) {
-    const lastLoginString = moment(lastLogin).fromNow(true);
+    const utc = moment.utc();
+    const lastlogin = moment(lastLogin, 'M/D/YYYY h:mm:ss a');
+    const duration = moment.duration(utc.diff(lastlogin));
+
+    const lastLoginString = duration.humanize();
+
     const navigate = useNavigate();
+    
     function handleClick(event) {
         const link = `/activematch/${status.Match}`;
         if (event.button === 0) {
@@ -14,6 +20,7 @@ export default function BasicBoxStatus({ status, lastLogin }) {
             window.open(link, '_blank');
         }
     }
+    
     switch (status?.status) {
         case 0:
             return <BasicBox className='status'>
