@@ -119,5 +119,17 @@ namespace PaladinStats.Controllers
             }
             return Ok(status[0].ToString());
         }
+
+        [HttpGet]
+        [Route("{name}")]
+        public IActionResult GetPlayerLoadouts(string name)
+        {
+            var loadouts = _context.GetPlayerLoadouts(name);
+            if (loadouts == null)
+            {
+                return NotFound();
+            }
+            return Ok(loadouts.ToString());
+        }
     }
 }

@@ -1,0 +1,113 @@
+@import '../../../../utils.scss';
+
+#playerloadouts {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 11;
+    
+    .dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1em;
+        border-radius: $border-radius;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+        max-height: 95vh;
+    }
+
+    .topBar {
+        display: flex;
+        align-items: center;
+        gap: .3em;
+
+        img {
+            width: 2rem;
+            aspect-ratio: 1/1;
+            border-radius: $border-radius;
+        }
+
+        .championName {
+            font-size: 2rem;
+            min-width: 10rem;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+
+        .closeButton {
+            font-size: 0.8em;
+            display: flex;
+            height: fit-content;
+        }
+    }
+
+    .loadoutsList {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: .4em;
+        overflow-y: auto;
+    }
+
+    .deck{
+        display: flex;
+        flex-direction: column;
+        gap: .4em;
+        padding: .4em;
+        border: solid 1px #ccc;
+        border-radius: $border-radius;
+        .deckName{
+            font-size: 1.5em;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            gap: .4rem;
+            li{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                img{
+                    width: 15vw;
+                    @include medium-device{
+                        width: 8rem;
+                    }
+                    aspect-ratio: 64 / 49;
+                }
+                .cardName{
+                    position: absolute;
+                    width: 15vw;
+                    font-size: 3vw;
+                    @include medium-device{
+                        width: 8rem;
+                        font-size: 1rem;
+                    }
+                    aspect-ratio: 64 / 49;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    text-align: center;
+                    color: white;
+                    pointer-events: none;
+                }
+                .points{
+                    list-style: none;
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: .3em;
+                    gap: .2em;
+                    li{
+                        border-radius: $border-radius;
+                        background-color: $goodDarkColor;
+                    }
+                }
+            }
+        }
+    }
+}
