@@ -7,7 +7,6 @@ import championsList from '../../../Resources/champions.json';
 import './ChampionList.scss';
 
 export default function ChampionList({ championData }) {
-  console.log(championData);
   const [champions, setChampions] = useState(championData);
   const [orderBy, setOrderBy] = useState(['time', true]);
 
