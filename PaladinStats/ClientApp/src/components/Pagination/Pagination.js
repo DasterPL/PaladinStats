@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './Pagination.scss';
 
-export default function Pagination({ changePage, count }) {
-    const [currentPage, setCurrentPage] = useState(0);
+export default function Pagination({ changePage, count, page=0 }) {
+    const [currentPage, setCurrentPage] = useState(page);
     const [leftDisabled, setLeftDisabled] = useState(true);
     const [rightDisabled, setRightDisabled] = useState(false);
+
+    useEffect(()=>{
+        setCurrentPage(page);
+    },[page])
 
     function pageDown() {
         if (currentPage > 0) {

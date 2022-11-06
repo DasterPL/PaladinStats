@@ -18,7 +18,8 @@ export default function MatchList({ matchData }) {
     }
     function handleQueueChange(queue) {
         const filteredData = queue ? matchData.filter(match => match.Match_Queue_Id === queue) : matchData;
-        setMatchList(filteredData.map((match, index) => <Match key={index} data={match} id={(index + 1)} />))
+        setMatchList(filteredData.map((match, index) => <Match key={index} data={match} id={(index + 1)} />));
+        setPage(0);
         setPageCount(Math.ceil(filteredData.length / itemsPerPage));
     }
     return <>
@@ -26,6 +27,6 @@ export default function MatchList({ matchData }) {
         <ul className='matchList' ref={ref}>
             {matchList.length > 0 ? matchList.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage) : <li className='noMatches'>Brak meczy</li>}
         </ul>
-        <Pagination count={pageCount} changePage={handlePageChange} />
+        <Pagination count={pageCount} changePage={handlePageChange} page={page}/>
     </>
 }
