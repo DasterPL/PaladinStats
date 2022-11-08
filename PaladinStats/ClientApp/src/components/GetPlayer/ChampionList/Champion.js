@@ -10,7 +10,6 @@ export default function Champion({ champion }) {
     const minutes = champion.Minutes % 60;
 
     const handleClick = (e) => {
-        console.log(e.type);
         setChampionLoadouts(<PlayerLoadouts champion={parseInt(champion.champion_id)} target={e.type === 'keydown' ? e.target : null} />);
     }
     return <>

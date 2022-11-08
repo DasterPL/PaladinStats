@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function Version() {
   return <div className='version'>
     <span>Wersja {process.env.REACT_APP_VERSION}</span>
