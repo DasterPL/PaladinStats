@@ -29,7 +29,6 @@ body {
 }
 
 #root {
-  // @include fadeIn;
   margin: 0;
   padding: 0;
   padding-top: 2em;
@@ -116,7 +115,6 @@ input {
     &::-webkit-calendar-picker-indicator {
       display: none !important;
       appearance: none;
-      // color: white;
     }
 
     &::-webkit-search-cancel-button {
