@@ -10,7 +10,7 @@ import Deck from './Deck';
 import GetElement from '../../../../Utils/GetElement';
 import Dialog from '../../../Dialog/Dialog';
 
-export default function PlayerLoadouts({ champion, target }) {
+export default function PlayerLoadouts({ champion }) {
     const { playerName } = useParams();
     const [render, setRender] = useState(<Loading dark={!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)} />);
 
@@ -34,7 +34,6 @@ export default function PlayerLoadouts({ champion, target }) {
 
     const handleClose = () => {
         GetElement('playerloadouts').remove();
-        target?.focus();
     }
     const championParams = championsList.find(c => c.id === champion);
     return createPortal(<Dialog icon={<ChampionIcon championId={champion} />} title={championParams.Name} onClose={handleClose}>
