@@ -1,25 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
 import { useParams } from 'react-router';
+import axios from 'axios';
 import Loading from '../../../Loading/Loading';
 import ChampionIcon from '../../../ChampionIcon';
 import championsList from '../../../../Resources/champions.json';
 import './PlayerLoadouts.scss';
 import Deck from './Deck';
 import GetElement from '../../../../Utils/GetElement';
+import Dialog from '../../../Dialog/Dialog';
 
 export default function PlayerLoadouts({ champion, target }) {
     const { playerName } = useParams();
-    const [render, setRender] = useState(<Loading dark={true} />);
-    const closeButton = useRef(0);
+    const [render, setRender] = useState(<Loading dark={!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)} />);
 
     useEffect(() => {
-        if (target) {
-            closeButton.current.focus();
-        }
         const abortController = new AbortController()
         axios.get(`api/GetPlayerLoadouts/${playerName}`, { signal: abortController.signal }).then(({ data }) => {
             const loadouts = data.filter((element) => element.ChampionId === champion);
@@ -37,19 +32,12 @@ export default function PlayerLoadouts({ champion, target }) {
 
     }, []);
 
-    const handleClick = () => {
+    const handleClose = () => {
         GetElement('playerloadouts').remove();
         target?.focus();
     }
     const championParams = championsList.find(c => c.id === champion);
-    return createPortal(<>
-        <div className='dialog'>
-            <div className='topBar'>
-                <ChampionIcon championId={champion} />
-                <span className='championName'>{championParams.Name}</span>
-                <button ref={closeButton} tabIndex={0} onClick={handleClick} className='closeButton'><FontAwesomeIcon icon={faXmark} /></button>
-            </div>
-            {render}
-        </div>
-    </>, GetElement('playerloadouts'));
+    return createPortal(<Dialog icon={<ChampionIcon championId={champion} />} title={championParams.Name} onClose={handleClose}>
+        {render}
+    </Dialog>, GetElement('playerloadouts'));
 }
