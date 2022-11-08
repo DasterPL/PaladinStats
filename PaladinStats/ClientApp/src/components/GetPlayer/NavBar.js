@@ -14,9 +14,9 @@ export default function NawBar({ handleReloadClick }) {
         return linkPath === location ? 'active' : '';
     }
     return <nav className='nawBar buttonGroup'>
-        <button onClick={handleReloadClick} title="Odśwież"><FontAwesomeIcon icon={faArrowRotateRight} /></button>
-        <button onClick={() => navigate(pathname)} className={isActive(pathname)}>Przegląd</button>
-        <button onClick={() => navigate(`${pathname}/matches`)} className={isActive(`${pathname}/matches`)}>Mecze</button>
-        <button onClick={() => navigate(`${pathname}/champions`)} className={isActive(`${pathname}/champions`)}>Postacie</button>
+        <button tabIndex={0} onClick={handleReloadClick} title="Odśwież"><FontAwesomeIcon icon={faArrowRotateRight} /></button>
+        <button tabIndex={0} onClick={() => navigate(pathname)} className={isActive(pathname)}>Przegląd</button>
+        <button tabIndex={0} onClick={() => navigate(`${pathname}/matches`)} className={isActive(`${pathname}/matches`)}>Mecze</button>
+        <button tabIndex={0} onClick={() => navigate(`${pathname}/champions`)} className={isActive(`${pathname}/champions`)}>Postacie</button>
     </nav>;
 }

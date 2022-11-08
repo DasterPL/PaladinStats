@@ -6,8 +6,11 @@ import './Favorite.scss';
 
 const SortablePlayerItem = ({ id, avatar, name }) => {
     const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/player/${id}`);
+    }
     return (
-        <li onClick={() => { navigate(`/player/${id}`) }}>
+        <li tabIndex={0} onClick={handleClick} onKeyDown={(e) => { if (e.code === "Space") handleClick() }}>
             <img onError={HandleErrorImg} src={avatar} alt='' />
             <span>{name}</span>
         </li>

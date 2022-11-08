@@ -9,12 +9,20 @@ export default function Champion({ champion }) {
     const hours = Math.floor(champion.Minutes / 60);
     const minutes = champion.Minutes % 60;
 
-    const handleClick = () => {
-        setChampionLoadouts(<PlayerLoadouts champion={parseInt(champion.champion_id)}/>);
+    const handleClick = (e) => {
+        console.log(e.type);
+        setChampionLoadouts(<PlayerLoadouts champion={parseInt(champion.champion_id)} target={e.type === 'keydown' ? e.target : null} />);
     }
     return <>
         <motion.li
+            tabIndex={0}
             onClick={handleClick}
+            onKeyDown={(e) => {
+                if (e.code === "Space") {
+                    e.preventDefault();
+                    handleClick(e);
+                }
+            }}
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
