@@ -97,7 +97,7 @@ div.input {
 }
 
 input {
-  background-color: var(--background-color);
+  background-color: rgb(var(--background-color-components));
   color: var(--font-color);
   display: inline-block;
   font-size: 1.5em;

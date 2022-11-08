@@ -48,36 +48,41 @@ $greyColor: grey;
 $goodDarkColor: #003a03;
 $badDarkColor: #3a0000;
 $greyDarkColor: rgb(78, 78, 78);
-$black-components: 0, 0, 0;
-$white-components: 255, 255, 255;
-$grey-components: 197, 197, 197;
 
 body {
-    --font-color-components: 0, 0, 0; //$black-components;
-    --background-color-components: 255, 255, 255; //$white-components;
+    --font-color-components: 0, 0, 0;
+    --background-color-components: 255, 255, 255;
+    --background-alpha: 0.5;
     --theme-opacity: 1;
     --button-lightness: 57%;
 
     --font-color: rgb(var(--font-color-components));
-    --background-color: rgba(var(--background-color-components), 0.7);
+    --background-color: rgba(var(--background-color-components), var(--background-alpha));
 
     color: var(--font-color);
 
     @media (prefers-color-scheme: dark) {
         --button-lightness: 40%;
-        --font-color-components: 197, 197, 197; //$grey-components;
-        --background-color-components: 25, 25, 25; //$black-components;
+        --font-color-components: 197, 197, 197;
+        --background-color-components: 25, 25, 25;
+        --background-alpha: 0.7;
         --theme-opacity: 0.7;
     }
 
     &.dark-theme {
-        --font-color-components: 197, 197, 197; //$grey-components;
-        --background-color-components: 25, 25, 25; //$black-components;
+        --button-lightness: 40%;
+        --font-color-components: 197, 197, 197;
+        --background-color-components: 25, 25, 25;
+        --background-alpha: 0.7;
+        --theme-opacity: 0.7;
     }
 
     &.light-theme {
-        --font-color-components: 0, 0, 0; //$black-components;
-        --background-color-components: 255, 255, 255; //$white-components;
+        --font-color-components: 0, 0, 0;
+        --background-color-components: 255, 255, 255;
+        --background-alpha: 0.5;
+        --theme-opacity: 1;
+        --button-lightness: 57%;
     }
 }
 
