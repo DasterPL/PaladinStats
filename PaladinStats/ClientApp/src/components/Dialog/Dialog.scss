@@ -1,0 +1,52 @@
+@import '../../utils.scss';
+
+.dialog {
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 11;
+    }
+
+    &__main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(var(--background-color-components));
+        padding: 1em;
+        border-radius: $border-radius;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+        min-width: 20vw;
+        max-height: 95vh;
+    }
+
+    &__topBar {
+        display: flex;
+        align-items: center;
+        gap: .3em;
+
+        img {
+            width: 2rem;
+            aspect-ratio: 1/1;
+            border-radius: $border-radius;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    &__closeButton {
+        font-size: 0.8em;
+        display: flex;
+        height: fit-content;
+    }
+}
