@@ -10,7 +10,7 @@ export default function Champion({ champion }) {
     const minutes = champion.Minutes % 60;
 
     const handleClick = () => {
-        setChampionLoadouts(<PlayerLoadouts champion={parseInt(champion.champion_id)} />);
+        setChampionLoadouts(<PlayerLoadouts champion={parseInt(champion.champion_id)} onClose={() => { setChampionLoadouts(null) }} />);
     }
     return <>
         <motion.li

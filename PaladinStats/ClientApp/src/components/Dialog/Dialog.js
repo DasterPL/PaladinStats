@@ -5,12 +5,14 @@ import './Dialog.scss';
 
 export default function Dialog({ title, icon, children, onClose }) {
     useEffect(() => {
+        document.body.style.overflow = "hidden";
         const closeByKeyboard = () => {
             onClose();
         }
         document.addEventListener('keydown', closeByKeyboard);
         return () => {
             document.removeEventListener('keydown', closeByKeyboard);
+            document.body.style.overflow = "";
         }
     }, []);
     return <div className='dialog__background'>
