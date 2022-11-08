@@ -4,15 +4,15 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 11;
-    
+
     .dialog {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: white;
+        background-color: var(--background-color);
         padding: 1em;
         border-radius: $border-radius;
         display: flex;
@@ -54,40 +54,49 @@
         overflow-y: auto;
     }
 
-    .deck{
+    .deck {
         display: flex;
         flex-direction: column;
         gap: .4em;
         padding: .4em;
         border: solid 1px #ccc;
         border-radius: $border-radius;
-        .deckName{
+
+        .deckName {
             font-size: 1.5em;
         }
-        ul{
+
+        ul {
             list-style: none;
             display: flex;
             gap: .4rem;
-            li{
+
+            li {
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 gap: .2rem;
-                img{
+
+                img {
                     width: 15vw;
-                    @include medium-device{
+
+                    @include medium-device {
                         width: 8rem;
                     }
+
                     aspect-ratio: 64 / 49;
                 }
-                .cardName{
+
+                .cardName {
                     position: absolute;
                     width: 15vw;
                     font-size: 3vw;
-                    @include medium-device{
+
+                    @include medium-device {
                         width: 8rem;
                         font-size: 1rem;
                     }
+
                     aspect-ratio: 64 / 49;
                     display: flex;
                     justify-content: center;
@@ -96,13 +105,15 @@
                     color: white;
                     pointer-events: none;
                 }
-                .points{
+
+                .points {
                     list-style: none;
                     display: grid;
                     grid-template-columns: repeat(5, 1fr);
                     grid-template-rows: .3em;
                     gap: .2em;
-                    li{
+
+                    li {
                         border-radius: $border-radius;
                         background-color: $goodDarkColor;
                     }

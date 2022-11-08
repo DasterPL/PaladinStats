@@ -158,7 +158,7 @@
     }
 
     .mapName {
-        @include whiteAlphaBackground;
+        background-color: var(--background-color);
         border-radius: $border-radius;
         text-align: center;
         font-size: 1.4em;
@@ -183,14 +183,14 @@
             justify-items: center;
             align-items: center;
             text-align: center;
-            @include whiteAlphaBackground;
+            background-color: var(--background-color);
             border-radius: $border-radius;
         }
 
         .bans {
             @include fadeIn;
             padding: 0.5rem;
-            @include whiteAlphaBackground;
+            background-color: var(--background-color);
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;

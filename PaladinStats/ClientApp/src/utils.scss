@@ -48,9 +48,37 @@ $greyColor: grey;
 $goodDarkColor: #003a03;
 $badDarkColor: #3a0000;
 $greyDarkColor: rgb(78, 78, 78);
+$black-components: 0, 0, 0;
+$white-components: 255, 255, 255;
+$grey-components: 197, 197, 197;
 
-@mixin whiteAlphaBackground {
-    background-color: rgba($color: white, $alpha: 0.5);
+body {
+    --font-color-components: 0, 0, 0; //$black-components;
+    --background-color-components: 255, 255, 255; //$white-components;
+    --theme-opacity: 1;
+    --button-lightness: 57%;
+
+    --font-color: rgb(var(--font-color-components));
+    --background-color: rgba(var(--background-color-components), 0.7);
+
+    color: var(--font-color);
+
+    @media (prefers-color-scheme: dark) {
+        --button-lightness: 40%;
+        --font-color-components: 197, 197, 197; //$grey-components;
+        --background-color-components: 25, 25, 25; //$black-components;
+        --theme-opacity: 0.7;
+    }
+
+    &.dark-theme {
+        --font-color-components: 197, 197, 197; //$grey-components;
+        --background-color-components: 25, 25, 25; //$black-components;
+    }
+
+    &.light-theme {
+        --font-color-components: 0, 0, 0; //$black-components;
+        --background-color-components: 255, 255, 255; //$white-components;
+    }
 }
 
 @mixin winBackground {

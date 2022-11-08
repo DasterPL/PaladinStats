@@ -16,7 +16,7 @@
         gap: 0.2em;
         cursor: pointer;
         border: solid 1px black;
-        background-color: rgba($color: white, $alpha: 0.6);
+        background-color: var(--background-color);
         padding: 0.5em;
         font-weight: bold;
         border-radius: $border-radius;
@@ -36,12 +36,14 @@
 
         &.empty {
             border: solid 1px gray;
-            background-color: rgba($color: white, $alpha: 0.5);
+            background-color: var(--background-color);
             cursor: default;
         }
 
+        &:focus,
         &:hover {
-            background-color: rgba($color: white, $alpha: 0.85);
+            background-color: rgba(var(--background-color-components), 0.85);
+            outline: solid 1px white;
         }
     }
 
