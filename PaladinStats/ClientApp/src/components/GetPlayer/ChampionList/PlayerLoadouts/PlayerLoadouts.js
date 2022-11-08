@@ -9,18 +9,7 @@ import ChampionIcon from '../../../ChampionIcon';
 import championsList from '../../../../Resources/champions.json';
 import './PlayerLoadouts.scss';
 import Deck from './Deck';
-
-function GetElement() {
-    const playerloadoutsDOM = document.getElementById('playerloadouts');
-    if (!playerloadoutsDOM) {
-        const newElement = document.createElement('div');
-        newElement.setAttribute('id', 'playerloadouts');
-        document.body.appendChild(newElement);
-        return newElement;
-    } else {
-        return playerloadoutsDOM;
-    }
-}
+import GetElement from '../../../../Utils/GetElement';
 
 export default function PlayerLoadouts({ champion, target }) {
     const { playerName } = useParams();
@@ -49,7 +38,7 @@ export default function PlayerLoadouts({ champion, target }) {
     }, []);
 
     const handleClick = () => {
-        GetElement().remove();
+        GetElement('playerloadouts').remove();
         target?.focus();
     }
     const championParams = championsList.find(c => c.id === champion);
@@ -62,5 +51,5 @@ export default function PlayerLoadouts({ champion, target }) {
             </div>
             {render}
         </div>
-    </>, GetElement());
+    </>, GetElement('playerloadouts'));
 }
