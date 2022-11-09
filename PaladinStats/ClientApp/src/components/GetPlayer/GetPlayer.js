@@ -30,7 +30,6 @@ export default function GetPlayer() {
                     axios.get(`/api/getPlayerStatus/${playerName}`, { signal: controllers[2].signal }),
                     axios.get(`/api/getPlayerMatchHistory/${playerName}`, { signal: controllers[3].signal })
                 ], (progress) => {
-                    console.log(progress);
                     setRender(<Loading progress={progress} />)
                 });
                 setRender(<ViewSwitcher handleReloadClick={() => setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
