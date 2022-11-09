@@ -1,4 +1,4 @@
-﻿namespace PaladinsDev.PaladinsDotNET
+﻿namespace PaladinsDotNET
 {
     class Variables
     {

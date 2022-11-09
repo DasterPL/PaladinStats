@@ -29,7 +29,7 @@ namespace PaladinStats
                 configuration.RootPath = "ClientApp/build";
             });
 
-            services.AddSingleton(new PaladinsDev.PaladinsDotNET.API(Configuration["ApiKey:devId"], Configuration["ApiKey:key"]));
+            services.AddSingleton(new PaladinsDotNET.API(Configuration["ApiKey:devId"], Configuration["ApiKey:key"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

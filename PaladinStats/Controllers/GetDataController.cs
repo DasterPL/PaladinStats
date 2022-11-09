@@ -6,9 +6,9 @@ namespace PaladinStats.Controllers
     [ApiController]
     public class GetDataController : ControllerBase
     {
-        private readonly PaladinsDev.PaladinsDotNET.API _context;
+        private readonly PaladinsDotNET.API _context;
 
-        public GetDataController(PaladinsDev.PaladinsDotNET.API context)
+        public GetDataController(PaladinsDotNET.API context)
         {
             _context = context;
         }
@@ -46,7 +46,7 @@ namespace PaladinStats.Controllers
         [HttpGet]
         public IActionResult GetItems()
         {
-            var items =  _context.GetItems();
+            var items = _context.GetItems();
             if (items == null)
             {
                 return StatusCode(500);
@@ -57,7 +57,7 @@ namespace PaladinStats.Controllers
         [Route("{id}")]
         public IActionResult GetMatchDetails(int id)
         {
-            var match =  _context.GetMatchDetails(id);
+            var match = _context.GetMatchDetails(id);
             if (match == null)
             {
                 return NotFound();
@@ -69,7 +69,7 @@ namespace PaladinStats.Controllers
         public IActionResult GetPlayer(string name)
         {
             var player = _context.GetPlayer(name);
-            if(!player.HasValues)
+            if (!player.HasValues)
             {
                 return NotFound();
             }

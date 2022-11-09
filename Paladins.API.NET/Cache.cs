@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using System;
 
-namespace PaladinsDev.PaladinsDotNET
+namespace PaladinsDotNET
 {
     public class Cache
     {
