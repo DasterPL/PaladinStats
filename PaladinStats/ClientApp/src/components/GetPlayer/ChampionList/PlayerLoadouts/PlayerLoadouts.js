@@ -21,7 +21,6 @@ export default function PlayerLoadouts({ champion, onClose }) {
 
     console.log(storedData);
     if (storedPlayerName !== playerName) {
-        console.log({ storedPlayerName, playerName });
         storedData = null;
     }
 
