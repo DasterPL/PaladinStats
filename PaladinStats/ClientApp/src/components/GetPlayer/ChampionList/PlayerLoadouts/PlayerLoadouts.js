@@ -36,7 +36,7 @@ export default function PlayerLoadouts({ champion, onClose }) {
     const handleClose = () => {
         setClosed(true);
         onClose();
-        GetElement('playerloadouts').remove();
+        // GetElement('playerloadouts').remove();
     }
     const championParams = championsList.find(c => c.id === champion);
     return createPortal(!closed ? <Dialog icon={<ChampionIcon championId={champion} />} title={championParams.Name} onClose={handleClose}>
