@@ -16,13 +16,13 @@ export default function SearchPlayer() {
 
     const [lastSearched, setLastSearched] = useLocalStorage('lastSearched', []);
 
-    
+
     useEffect(() => {
-        lastSearched.addChangeListener((value)=>{
+        setLastSearched.addChangeListener((value) => {
             setLastSearched(value);
         });
     }, []);
-    
+
     function handleSubmit(event) {
         event.preventDefault();
         const playerName = event.target.playerName.value

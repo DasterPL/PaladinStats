@@ -1,33 +1,31 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const listeners = {};
 
-export default function useLocalStorage(key, defaultValue=null) {
-    const initialRender = useRef(true);
+export default function useLocalStorage(key, defaultValue = null) {
     const [value, setValue] = useState(
-        JSON.parse(localStorage.getItem(key)) || defaultValue
+        JSON.parse(localStorage.getItem(key)) ?? defaultValue
     );
-    
-    useEffect(()=>{
-        value.addChangeListener = function(calback){
-            if(listeners[key] && Array.isArray(listeners[key])){
+
+    useEffect(() => {
+        setValue.addChangeListener = function (calback) {
+            if (listeners[key] && Array.isArray(listeners[key])) {
                 listeners[key].push(calback);
-            }else{
-                listeners[key]= [calback];
+            } else {
+                listeners[key] = [calback];
             }
         }
-        if(initialRender.current){
-            initialRender.current = false;
-        }else{
-            localStorage.setItem(key, JSON.stringify(value));
-            if(listeners[key] && Array.isArray(listeners[key])){
-                listeners[key].forEach(listener=>{
-                    listener(value);
-                });
-            }
+
+        localStorage.setItem(key, JSON.stringify(value));
+        if (listeners[key] && Array.isArray(listeners[key])) {
+            listeners[key].forEach(listener => {
+                listener(value);
+            });
+        }
+
+        return () => {
+            delete listeners[key];
         }
     }, [value]);
-
     return [value, setValue];
 }
-
