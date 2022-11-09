@@ -1,0 +1,21 @@
+@import '../../utils.scss';
+
+.setting {
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: .3em;
+    }
+
+    &__option {
+        padding: .3em;
+        display: flex;
+        gap: .3em;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover {
+            background-color: var(--background-color);
+        }
+    }
+}

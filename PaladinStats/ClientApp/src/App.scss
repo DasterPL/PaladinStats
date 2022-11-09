@@ -36,6 +36,12 @@ header {
   text-align: center;
 }
 
+.settingbutton {
+  position: fixed;
+  bottom: .2em;
+  right: .2em;
+}
+
 .background {
   z-index: -1;
   position: fixed;

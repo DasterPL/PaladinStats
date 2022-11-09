@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 
@@ -12,8 +12,17 @@ import ErrorPage from './Components/Errors/ErrorPage';
 import GetActiveMatchDetails from './Components/GetActiveMatchDetails/GetActiveMatchDetails';
 
 import './App.scss';
+import SettingButton from './Components/Settings/SettingButton';
+import useLocalStorage from './Utils/useLocalStorage';
 
 export default function App() {
+    const [autoTheme, setAutoTheme] = useLocalStorage('autoTheme', true);
+    const [theme, setTheme] = useLocalStorage('theme', false);
+
+    if (!autoTheme) {
+        document.body.classList.add(theme ? 'theme-dark' : 'light-theme');
+    }
+
     return <>
         <div className='background'></div>
         <Router>
@@ -36,5 +45,6 @@ export default function App() {
         <footer>
             <Version />
         </footer>
+        <SettingButton />
     </>
 }
