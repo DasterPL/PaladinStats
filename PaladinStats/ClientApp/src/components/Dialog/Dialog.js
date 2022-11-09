@@ -6,8 +6,10 @@ import './Dialog.scss';
 export default function Dialog({ title, icon, children, onClose }) {
     useEffect(() => {
         document.body.style.overflow = "hidden";
-        const closeByKeyboard = () => {
-            onClose();
+        const closeByKeyboard = (e) => {
+            if (e.code === "Escape") {
+                onClose();
+            }
         }
         document.addEventListener('keydown', closeByKeyboard);
         return () => {
