@@ -12,10 +12,16 @@
     @include fadeIn;
     text-shadow: 2px 2px 2px black;
 
+    progress {
+        width: 50%;
+        height: 2rem;
+    }
+
     span {
         font-size: 2em;
     }
-    &.dark{
+
+    &.dark {
         color: black;
     }
 }
