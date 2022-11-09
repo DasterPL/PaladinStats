@@ -21,7 +21,7 @@ export default function GetPlayer() {
                 const [
                     getPlayer,
                     getPlayerChampionRanks,
-                    getPlayerStatus, 
+                    getPlayerStatus,
                     getPlayerMatchHistory
                 ] = await Promise.all([
                     axios.get(`/api/getPlayer/${playerName}`, { signal: controllers[0].signal }),
@@ -31,7 +31,8 @@ export default function GetPlayer() {
                 ]);
                 setRender(<ViewSwitcher handleReloadClick={() => setReload(!reload)} playerData={getPlayer.data} statusData={getPlayerStatus.data} matchData={getPlayerMatchHistory.data} championData={getPlayerChampionRanks.data} />);
             } catch (error) {
-                setRender(<ErrorNavigate error={error} />)
+                controllers.forEach(controller => controller.abort());
+                setRender(<ErrorNavigate error={error} />);
             }
         }
         getData();
