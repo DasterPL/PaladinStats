@@ -13,7 +13,8 @@ import Dialog from '../../../Dialog/Dialog';
 export default function PlayerLoadouts({ champion, onClose }) {
     const [closed, setClosed] = useState(false);
     const { playerName } = useParams();
-    const [render, setRender] = useState(<Loading dark={!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)} />);
+    const theme = document.body.classList.contains('light-theme') ? true : document.body.classList.contains('dark-theme') ? false : !(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const [render, setRender] = useState(<Loading dark={theme} />);
 
     useEffect(() => {
         const abortController = new AbortController()
