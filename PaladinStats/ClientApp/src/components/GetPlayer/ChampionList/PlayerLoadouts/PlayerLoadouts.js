@@ -10,16 +10,29 @@ import Deck from './Deck';
 import GetElement from '../../../../Utils/GetElement';
 import Dialog from '../../../Dialog/Dialog';
 
+let storedData;
+let storedPlayerName;
+
 export default function PlayerLoadouts({ champion, onClose }) {
     const [closed, setClosed] = useState(false);
     const { playerName } = useParams();
     const theme = document.body.classList.contains('light-theme') ? true : document.body.classList.contains('dark-theme') ? false : !(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
     const [render, setRender] = useState(<Loading dark={theme} />);
 
+    console.log(storedData);
+    if (storedPlayerName !== playerName) {
+        console.log({ storedPlayerName, playerName });
+        storedData = null;
+    }
+
     useEffect(() => {
         const abortController = new AbortController()
-        axios.get(`api/GetPlayerLoadouts/${playerName}`, { signal: abortController.signal }).then(({ data }) => {
-            const loadouts = data.filter((element) => element.ChampionId === champion);
+        const fetchData = async () => {
+            if (!storedData) {
+                storedData = (await axios.get(`api/GetPlayerLoadouts/${playerName}`, { signal: abortController.signal })).data;
+                storedPlayerName = playerName;
+            }
+            const loadouts = storedData.filter((element) => element.ChampionId === champion);
             if (loadouts.length === 0) {
                 setRender(<span>Brak talii</span>)
             } else {
@@ -27,7 +40,8 @@ export default function PlayerLoadouts({ champion, onClose }) {
                     {loadouts.map((deck, i) => <Deck key={i} data={deck} />)}
                 </ul>);
             }
-        });
+        }
+        fetchData();
         return () => {
             abortController.abort();
         }
