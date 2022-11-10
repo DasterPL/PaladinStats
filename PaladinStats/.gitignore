@@ -237,4 +237,4 @@ appsettings.json
 appsettings.Development.json
 
 # vs codes
-.vscode/settings.json
+.vscode/
